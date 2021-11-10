@@ -1,0 +1,55 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+body{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 1366px;
+}
+
+.logo{
+    height: 64px;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.botoesHeader{
+    background: #54539c;
+    border-radius: 7px;
+    padding: 10px;
+    color: #ffff;
+    border: none;
+    font-size: 20px;
+    margin-right: 24px;
+    position: absolute;
+    right: 0px;
+    top: calc(50% - 20px);
+}
+
+header > nav > ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+header > nav > ul > li{
+    display: inline-block;
+}
+header > nav > ul > li > a{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    height: 66px;
+    background-color:  #07001F;
+    position: relative;
+}
