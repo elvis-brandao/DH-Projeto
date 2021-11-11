@@ -143,6 +143,17 @@ main > .boxCentral > .emAlta > .jogosEmAlta > img{
   background-color: rgba(124, 120, 168, 0.34);
   border-radius: 20px;
 }
+.jogosEmAlta:hover{
+  background-color: #7C78A8;
+}
+
+
+
+
+
+
+
+
 
 
 
