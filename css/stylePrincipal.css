@@ -19,11 +19,14 @@ body{
     padding: 10px;
     color: #ffff;
     border: none;
-    font-size: 20px;
+    font-size: 26px;
     margin-right: 24px;
     position: absolute;
     right: 0px;
-    top: calc(50% - 20px);
+    top: calc(50% - 25px);
+}
+.botoesHeader:hover{
+  background-color: #7C78A8;
 }
 header > nav > ul{
     padding: 0;
@@ -38,7 +41,10 @@ header > nav > ul > li > a{
     padding: 10px 20px;
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 26px;
+}
+header > nav > ul > li > a:hover{
+  background-color: #7C78A8;
 }
 header{
     display: flex;
@@ -83,7 +89,10 @@ main > .categorias > nav > ul > li > a{
   padding: 10px 20px;
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 26px;
+}
+main > .categorias > nav > ul > li > a:hover{
+  background-color: #7C78A8;
 }
 .boxBuscar{
   background-color: white;
@@ -110,7 +119,7 @@ width: 1366px;
 margin-top: 32px;
 margin-bottom: 8px;
 color: white;
-font-size: 30px;
+font-size: 36px;
 }
 .t1{
   width: 834px;
@@ -137,6 +146,13 @@ font-size: 30px;
 .topVendedores{
   width: 482px;
   margin-right: 13px;
+  background-color: rgba(73, 85, 125, 0.7);
+  border-radius: 20px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 main > .boxCentral > .emAlta > .jogosEmAlta > img{
   width: 270px;
@@ -154,9 +170,29 @@ main > .boxCentral > .emAlta > .jogosEmAlta > img{
 .jogosEmAlta:hover{
   background-color: #7C78A8;
 }
-
-
-
+main > .boxCentral > .topVendedores > .imgVendedores > img{
+  width: 130px;
+  border-radius: 65px;
+  margin-left: 16px;
+}
+.imgVendedores{
+  display: flex;
+}
+main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > h2{
+  color: white;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
+  width: 25px;
+}
+.reputVendedor{
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 130px;
+}
 
 
 
