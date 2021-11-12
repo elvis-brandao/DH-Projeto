@@ -150,6 +150,8 @@ font-size: 36px;
   border-radius: 20px;
   margin-top: 4px;
   margin-bottom: 4px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -166,6 +168,17 @@ main > .boxCentral > .emAlta > .jogosEmAlta > img{
   margin-right: 4px;
   background-color: rgba(124, 120, 168, 0.34);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.jogosEmAlta > h3{
+  margin-top: 0px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  color: white;
+  font-weight: 150;
+  font-size: 20px;
 }
 .jogosEmAlta:hover{
   background-color: #7C78A8;
@@ -177,6 +190,9 @@ main > .boxCentral > .topVendedores > .imgVendedores > img{
 }
 .imgVendedores{
   display: flex;
+}
+.imgVendedores:hover{
+  background-color: #7C78A8;
 }
 main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > h2{
   color: white;
