@@ -1,0 +1,231 @@
+main{
+    background-color: rgb(33,48,70);
+    background-color: linear-gradient(180deg, rgba(33,48,70,1) 70%, rgba(23,36,55,0.78) 90%, rgba(48,80,129,0.68) 100%);
+    height: 1600px;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.categorias{
+  height: 66px;
+  width: 1340px;
+  margin-top: 16px;
+  background-color: #07001F;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+main > .categorias >nav > ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+main > .categorias > nav > ul > li{
+  display: inline-block;
+}
+main > .categorias > nav > ul > li > a{
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 26px;
+}
+main > .categorias > nav > ul > li > a:hover{
+  background-color: #7C78A8;
+}
+.boxBuscar{
+  background-color: white;
+  width: 573px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 32px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: gray;
+  text-indent: 16px;
+}
+main > .categorias > img{
+  position: absolute;
+  width: 24px;
+  right: 40px;
+}
+.titulosBoxes{
+display: flex;
+width: 1366px;
+}
+.t1, .t2{
+margin-top: 32px;
+margin-bottom: 8px;
+color: white;
+font-size: 30px;
+}
+.t1{
+  width: 834px;
+  margin-left: 13px;
+  margin-right: 24px;
+}
+.t2{
+  width: 482px;
+  margin-right: 13px;
+}
+.boxCentral{
+  width: 1366px;
+  height: 1000px;
+  display: flex;
+}
+.emAlta{
+  display: flex;
+  width: 834px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: 13px;
+  margin-right: 24px;
+  }
+.topVendedores{
+  width: 482px;
+  margin-right: 13px;
+  background-color: rgba(73, 85, 125, 0.7);
+  border-radius: 20px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main > .boxCentral > .emAlta > .jogosEmAlta > img{
+  width: 270px;
+  border-radius: 20px 20px 0 0;
+}
+.jogosEmAlta{
+  height: 325px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgba(124, 120, 168, 0.34);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.jogosEmAlta > h3{
+  margin-top: 0px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  color: white;
+  font-weight: 150;
+  font-size: 20px;
+}
+.jogosEmAlta:hover{
+  background-color: #7C78A8;
+}
+main > .boxCentral > .topVendedores > .imgVendedores > img{
+  width: 130px;
+  border-radius: 65px;
+  margin-left: 16px;
+}
+.imgVendedores{
+  display: flex;
+}
+.imgVendedores:hover{
+  background-color: #7C78A8;
+}
+main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > h2{
+  color: white;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
+  width: 25px;
+}
+.reputVendedor{
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 130px;
+}
+
+
+
+
+
+/* Código Carrossel */
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1366px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 20px);
+  width: auto;
+  padding: 16px;
+  margin-top: -32px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  top: -20px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
