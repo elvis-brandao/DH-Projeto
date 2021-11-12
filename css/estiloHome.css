@@ -19,7 +19,7 @@ body{
     padding: 10px;
     color: #ffff;
     border: none;
-    font-size: 26px;
+    font-size: 20px;
     margin-right: 24px;
     position: absolute;
     right: 0px;
@@ -119,7 +119,7 @@ width: 1366px;
 margin-top: 32px;
 margin-bottom: 8px;
 color: white;
-font-size: 36px;
+font-size: 30px;
 }
 .t1{
   width: 834px;
@@ -221,6 +221,11 @@ main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
 .linha1{
     display: flex;
 }
+.linha2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .col1{
     width: 650px;
     text-align: justify;
@@ -258,23 +263,20 @@ main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
 .footer-links a{
   color: white;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover{
   color:#7C78A8;
   text-decoration :none;
 }
-.site-footer .social-icons{
-  text-align:right;
-}
- 
+
 .site-footer .social-icons a{
-  width:60px;
-  height:60px;
+  width:40px;
+  height:40px;
   margin-left:8px;
-  margin-right:0;
   border-radius:100%;
-  background-color:#33353d;
+  display:inline-block;
+  border-radius:100%;
 }
 .copyright-text{
   margin: 0;
@@ -286,14 +288,6 @@ main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
 }
 .social-icons li{
   display:inline-block;
-}
-.social-icons a{
-  display:inline-block;
-  width:44px;
-  height:44px;
-  text-align:center;
-  margin-right:8px;
-  border-radius:100%;
 }
 .facebook{
   background-image: url("https://seeklogo.com/images/F/facebook-logo-966BBFBC34-seeklogo.com.png");
