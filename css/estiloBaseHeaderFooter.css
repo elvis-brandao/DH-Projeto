@@ -10,7 +10,7 @@ body{
 }
 .logo{
     height: 64px;
-    margin-left: 1px;
+    margin-left: 8px;
     margin-top: 1px;
 }
 .botoesHeader{
@@ -19,7 +19,7 @@ body{
     padding: 10px;
     color: #ffff;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 24px;
     position: absolute;
     right: 0px;
@@ -41,7 +41,7 @@ header > nav > ul > li > a{
     padding: 10px 20px;
     text-decoration: none;
     color: white;
-    font-size: 26px;
+    font-size: 20px;
 }
 header > nav > ul > li > a:hover{
   background-color: #7C78A8;
@@ -52,7 +52,7 @@ header{
     height: 66px;
     background-color:  #07001F;
     position: relative;
-    width: 1366px;
+    max-width: 1360px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -60,7 +60,7 @@ main{
     background-color: rgb(33,48,70);
     background-color: linear-gradient(180deg, rgba(33,48,70,1) 70%, rgba(23,36,55,0.78) 90%, rgba(48,80,129,0.68) 100%);
     height: 1600px;
-    max-width: 1366px;
+    max-width: 1360px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -72,7 +72,7 @@ main{
   padding:20px 13px 20px 13px;
   font-size:16px;
   color: white;
-  max-width: 1366px;
+  max-width: 1360px;
   margin-right: auto;
   margin-left: auto;
 }

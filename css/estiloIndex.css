@@ -23,7 +23,7 @@ main > .categorias > nav > ul > li > a{
   padding: 10px 20px;
   text-decoration: none;
   color: white;
-  font-size: 26px;
+  font-size: 20px;
 }
 main > .categorias > nav > ul > li > a:hover{
   background-color: #7C78A8;
@@ -36,7 +36,7 @@ main > .categorias > nav > ul > li > a:hover{
   margin-right: 32px;
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
   color: gray;
   text-indent: 16px;
 }
@@ -47,13 +47,14 @@ main > .categorias > img{
 }
 .titulosBoxes{
 display: flex;
-width: 1366px;
+justify-content: space-evenly;
+max-width: 1360px;
 }
 .t1, .t2{
 margin-top: 32px;
 margin-bottom: 8px;
 color: white;
-font-size: 30px;
+font-size: 24px;
 }
 .t1{
   width: 834px;
@@ -61,13 +62,14 @@ font-size: 30px;
   margin-right: 24px;
 }
 .t2{
-  width: 482px;
+  width: 300px;
   margin-right: 13px;
 }
 .boxCentral{
-  width: 1366px;
+  max-width: 1360px;
   height: 1000px;
   display: flex;
+  justify-content: space-evenly;
 }
 .emAlta{
   display: flex;
@@ -78,7 +80,7 @@ font-size: 30px;
   margin-right: 24px;
   }
 .topVendedores{
-  width: 482px;
+  width: 300px;
   margin-right: 13px;
   background-color: rgba(73, 85, 125, 0.7);
   border-radius: 20px;
@@ -112,18 +114,19 @@ main > .boxCentral > .emAlta > .jogosEmAlta > img{
   margin-left: 8px;
   color: white;
   font-weight: 150;
-  font-size: 20px;
+  font-size: 16px;
 }
 .jogosEmAlta:hover{
   background-color: #7C78A8;
 }
 main > .boxCentral > .topVendedores > .imgVendedores > img{
-  width: 130px;
-  border-radius: 65px;
+  width: 120px;
+  border-radius: 60px;
   margin-left: 16px;
 }
 .imgVendedores{
   display: flex;
+  align-items: center;
 }
 .imgVendedores:hover{
   background-color: #7C78A8;
@@ -132,6 +135,8 @@ main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > h2{
   color: white;
   margin-top: 4px;
   margin-bottom: 4px;
+  font-size: medium;
+  font-weight: 400;
 }
 main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
   width: 25px;
@@ -140,8 +145,7 @@ main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
   margin-left: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 130px;
+  height: auto;
 }
 
 
