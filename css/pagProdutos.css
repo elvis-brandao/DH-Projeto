@@ -3,3 +3,48 @@
   font-size: 50px;
   text-align: center;
 }
+p{
+  display: inline;
+  color: white;
+  padding: 5px;
+  
+  
+}
+
+.hk{
+  font-size: 30px;
+  display: flex;
+  
+}
+
+img{
+  width: 56%;
+  height: 30%;
+}
+
+.div1 img{
+  display: inline;
+  width: 252px;
+  height: 170px;
+  margin-top: 8px;
+}
+.div2 img{
+ float:right;
+ position: absolute;
+ left: 1609px;
+ top: 250px;
+ width: 570px;
+ height: 250px;
+}
+
+.div2 p{
+  position: absolute;
+  top: 490px;
+  left: 1603px;
+  font-size: 19px;
+  text-align: justify;
+  font-family: sans-serif;
+  font-weight: normal;
+
+}
+
