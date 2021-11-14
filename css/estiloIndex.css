@@ -1,6 +1,6 @@
 .categorias{
   height: 66px;
-  width: 1340px;
+  width: 1360px;
   margin-top: 16px;
   background-color: #07001F;
   margin-left: auto;
@@ -162,7 +162,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1366px;
+  max-width: 1360px;
   position: relative;
   margin: auto;
 }
