@@ -1,6 +1,6 @@
 .categorias{
   height: 66px;
-  width: 1360px;
+  max-width: 1360px;
   margin-top: 16px;
   background-color: #07001F;
   margin-left: auto;
@@ -33,7 +33,7 @@ main > .categorias > nav > ul > li > a:hover{
   width: 573px;
   height: 40px;
   border-radius: 20px;
-  margin-right: 32px;
+  margin-right: 16px;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -47,7 +47,7 @@ main > .categorias > img{
 }
 .titulosBoxes{
 display: flex;
-justify-content: space-evenly;
+justify-content: space-around;
 max-width: 1360px;
 margin-left: auto;
 margin-right: auto;
@@ -59,49 +59,48 @@ color: white;
 font-size: 24px;
 }
 .t1{
-  width: 834px;
+  width: 1100px;
   margin-left: 13px;
   margin-right: 24px;
 }
 .t2{
-  width: 300px;
+  width: 250px;
   margin-right: 13px;
 }
 .boxCentral{
   max-width: 1360px;
   height: 1000px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
 }
 .emAlta{
   display: flex;
-  width: 834px;
+  width: 1100px;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-left: 13px;
-  margin-right: 24px;
+  margin-right: 8px;
   }
 .topVendedores{
-  width: 300px;
-  margin-right: 13px;
+  width: 250px;
+  margin-right: 0px;
   background-color: rgba(73, 85, 125, 0.7);
   border-radius: 20px;
   margin-top: 4px;
   margin-bottom: 4px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 main > .boxCentral > .emAlta > .jogosEmAlta > img{
-  width: 270px;
+  width: 265px;
   border-radius: 20px 20px 0 0;
 }
 .jogosEmAlta{
-  height: 325px;
+  height: 320px;
   margin-top: 4px;
   margin-bottom: 4px;
   margin-left: 4px;
@@ -118,15 +117,16 @@ main > .boxCentral > .emAlta > .jogosEmAlta > img{
   margin-left: 8px;
   color: white;
   font-weight: 150;
-  font-size: 16px;
+  font-size: large;
 }
 .jogosEmAlta:hover{
   background-color: #7C78A8;
 }
 main > .boxCentral > .topVendedores > .imgVendedores > img{
-  width: 120px;
-  border-radius: 60px;
+  width: 80px;
+  border-radius: 40px;
   margin-left: 16px;
+  margin-right: 16px;
 }
 .imgVendedores{
   display: flex;
@@ -143,10 +143,9 @@ main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > h2{
   font-weight: 400;
 }
 main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
-  width: 25px;
+  width: 20px;
 }
 .reputVendedor{
-  margin-left: 24px;
   display: flex;
   flex-direction: column;
   height: auto;
