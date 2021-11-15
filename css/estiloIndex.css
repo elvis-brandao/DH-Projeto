@@ -110,6 +110,7 @@ main > .boxCentral > .emAlta > .jogosEmAlta > img{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-decoration: none;
 }
 .jogosEmAlta > h3{
   margin-top: 0px;
