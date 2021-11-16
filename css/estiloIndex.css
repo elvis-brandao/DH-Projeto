@@ -166,7 +166,6 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -182,18 +181,15 @@ img {vertical-align: middle;}
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -207,11 +203,9 @@ img {vertical-align: middle;}
   position: relative;
   top: -20px;
 }
-
 .active, .dot:hover {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -219,13 +213,234 @@ img {vertical-align: middle;}
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+@media (max-width: 540px){
+  .dot {
+    height: 8px;
+    width: 8px;
+    top: -16px;
+  }
+  .prev, .next {
+    top: 50%;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.0);
+  }
+  .categorias{
+    height: 25px;
+    margin-top: 0px;
+    margin-top: 0px;
+  }
+  main > .categorias > nav > ul > li > a{
+    padding: 4px 4px;
+    font-size: 11px; 
+  }
+  .boxBuscar{
+    width: 95px;
+    height: 16px;
+    margin-right: 2px;
+    font-size: 10px;
+    text-indent: 4px;
+  }
+  main > .categorias > img{
+    position: absolute;
+    width: 12px;
+    right: 8px;
+  }
+  .t1, .t2{
+    margin-top: 8px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    }
+    .t1{
+      width: 70%;
+      margin-left: 4px;
+      margin-right: 2px;
+    }
+    .t2{
+      width: 30%;
+      margin-left: 4px;
+      margin-right: 2px;
+    }
+
+    .boxCentral{
+      max-width: 100%;
+      height: auto;
+    }
+    .emAlta{
+      width: 70%;
+      margin-left: 2px;
+      margin-right: 2px;
+      }
+    .topVendedores{
+      width: 30%;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 2px;
+      justify-content: flex-start;
+    }
+    main > .boxCentral > .emAlta > .jogosEmAlta > img{
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+    .jogosEmAlta{
+      height: auto;
+      width: 49%;
+      border-radius: 5px;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    .jogosEmAlta > h3{
+      margin-bottom: 1px;
+      margin-left: 1px;
+      font-size: xx-small;
+    }
+
+    main > .boxCentral > .topVendedores > .imgVendedores > img{
+      width: 40px;
+      border-radius: 20px;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-bottom: 10px;
+    }
+    main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > h2{
+      margin-top: 1px;
+      margin-bottom: 1px;
+      font-size: xx-small;
+      font-weight: 100;
+    }
+    main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
+      width: 10px;
+    }
+    .reputVendedor{
+      height: 40px;
+    }
+    .imgVendedores{
+      align-items: center;
+    }
+}
+@media (max-width: 1359px) and (min-width: 541px){
+  .dot {
+    height: 8px;
+    width: 8px;
+    top: -16px;
+  }
+  .prev, .next {
+    top: 50%;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.0);
+  }
+  .categorias{
+    height: 36px;
+    margin-top: 0px;
+    margin-top: 0px;
+  }
+  main > .categorias > nav > ul > li > a{
+    padding: 6px 6px;
+    font-size: 14px; 
+  }
+  .boxBuscar{
+    width: 225px;
+    height: 24px;
+    margin-right: 2px;
+    font-size: 12px;
+    text-indent: 8px;
+  }
+  main > .categorias > img{
+    position: absolute;
+    width: 16px;
+    right: 8px;
+  }
+  .t1, .t2{
+    margin-top: 8px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    }
+    .t1{
+      width: 70%;
+      margin-left: 4px;
+      margin-right: 2px;
+    }
+    .t2{
+      width: 30%;
+      margin-left: 4px;
+      margin-right: 2px;
+    }
+
+    .boxCentral{
+      max-width: 100%;
+      height: auto;
+    }
+    .emAlta{
+      width: 80%;
+      margin-left: 2px;
+      margin-right: 2px;
+      }
+    .topVendedores{
+      width: 20%;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 2px;
+      justify-content: flex-start;
+    }
+    main > .boxCentral > .emAlta > .jogosEmAlta > img{
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+    .jogosEmAlta{
+      height: auto;
+      width: 32%;
+      border-radius: 5px;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    .jogosEmAlta > h3{
+      margin-bottom: 1px;
+      margin-left: 1px;
+      font-size: x-small;
+    }
+
+    main > .boxCentral > .topVendedores > .imgVendedores > img{
+      width: 40px;
+      border-radius: 20px;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-bottom: 10px;
+    }
+    main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > h2{
+      margin-top: 1px;
+      margin-bottom: 1px;
+      font-size: x-small;
+      font-weight: 100;
+    }
+    main > .boxCentral > .topVendedores > .imgVendedores > .reputVendedor > img{
+      width: 10px;
+    }
+    .reputVendedor{
+      height: 40px;
+    }
+    .imgVendedores{
+      align-items: center;
+    }
 }

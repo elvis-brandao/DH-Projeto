@@ -67,7 +67,6 @@ header{
 main{
     background-color: rgb(33,48,70);
     background-color: linear-gradient(180deg, rgba(33,48,70,1) 70%, rgba(23,36,55,0.78) 90%, rgba(48,80,129,0.68) 100%);
-    height: 1600px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -146,7 +145,6 @@ main{
   margin-left:8px;
   border-radius:100%;
   display:inline-block;
-  border-radius:100%;
 }
 .copyright-text{
   margin: 0;
@@ -170,4 +168,113 @@ main{
 .whatsapp{
   background-image: url("https://seeklogo.com/images/W/whatsapp-icon-logo-BDC0A8063B-seeklogo.com.png");
   background-size: cover;
+}
+
+
+
+
+@media (max-width: 540px){
+  .logo{
+    height: 24px;
+    margin-left: 1px;
+    margin-top: 1px;
+  }
+  .botoesHeader{
+    font-size: 11px;
+    margin-right: 2px;
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    border-radius: 4px;
+    padding: 3px;
+  }
+  header > .containerHeader > nav > ul > li > a{
+    padding: 4px 4px;
+    color: white;
+    font-size: 11px;
+  }
+  header{
+    height: 25px;
+  }
+
+  .site-footer{
+    padding:10px 7px 10px 7px;
+    font-size:8px;
+  }
+  .col1{
+    width: 60%;
+    margin-right: 8px;
+  }
+  .col2{
+    width: 20%;
+  }
+  .col3{
+    width: 20%;
+  }
+  site-footer hr.small{
+    margin:5px 0;
+  }
+  .site-footer h6{
+    font-size:9px;
+  }
+  .footer-links a{
+    font-size: 8px;
+  }
+  .site-footer .social-icons a{
+    width:16px;
+    height:16px;
+    margin-left:4px;
+  }
+}
+@media (max-width: 1359px){
+  .logo{
+    height: 34px;
+    margin-left: 1px;
+    margin-top: 1px;
+  }
+  .botoesHeader{
+    font-size: 14px;
+    margin-right: 4px;
+    right: 2px;
+    top: calc(50% - 11px);
+    border-radius: 10px;
+    padding: 3px;
+  }
+  header > .containerHeader > nav > ul > li > a{
+    padding: 6px 6px;
+    color: white;
+    font-size: 14px;
+  }
+  header{
+    height: 36px;
+  }
+
+  .site-footer{
+    padding:10px 7px 10px 7px;
+    font-size:10px;
+  }
+  .col1{
+    width: 60%;
+    margin-right: 16px;
+  }
+  .col2{
+    width: 15%;
+  }
+  .col3{
+    width: 25%;
+  }
+  site-footer hr.small{
+    margin:8px 0;
+  }
+  .site-footer h6{
+    font-size:11px;
+  }
+  .footer-links a{
+    font-size: 10px;
+  }
+  .site-footer .social-icons a{
+    width:20px;
+    height:20px;
+    margin-left:8px;
+  }
 }
