@@ -31,29 +31,36 @@ img{
   margin-left: 15px; 
   margin-top: 20px; 
 }
-.div2 img{
- float:right;
- position: absolute;
- left: 1609px;
- top: 250px;
- width: 570px;
- height: 250px;
+
+.knight3{
+  border-style:solid;
+  color: white;
 }
 
-.div2 p{
+
+.div2 img{   /*imagem do texto CORRA!   */
+ float:right;
+ position: absolute;
+ left: 2415px;
+ top: 250px;
+ width: 670px;
+ height: 350px;
+}
+
+.div2 p{           /*texto: descrição do jogo */
   position: absolute;
-  top: 490px;
-  left: 1603px;
-  font-size: 20px;
+  top: 590px;
+  left: 2413px;
+  font-size: 30px;
   text-align: justify;
   font-family: sans-serif;
   font-weight: normal;
 
 }
 
-.hollow{    /*texto: O melhor game de Virtual já lançado   */
+.hollow{    /*texto: CORRA! ULTIMAS UNIDADES!   */
   position: absolute;
-  left: 1680px;
+  left: 2550px;
   top: 160px;
   font-size: 30px;
   display: flex;
