@@ -132,6 +132,7 @@ main > .boxCentral > .topVendedores > .imgVendedores > img{
 .imgVendedores{
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .imgVendedores:hover{
   background-color: #7C78A8;
