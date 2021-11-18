@@ -1,74 +1,24 @@
-.teste{
-  color: white;
-  font-size: 50px;
-  text-align: center;
-}
-p{
-  display: inline;
-  color: white;
-  padding: 5px;
-  
-  
-}
-
-.hk{   /*texto: Destaque - Virtual Reality Gamer */
-  font-size: 30px;
+.pai{
+  max-width: 1360px;
   display: flex;
-  
-}
-
-img{
-  width: 56%;
-  height: 30%;
-}
-
-.div1 img{
-  display: inline;
-  width: 252px;
-  height: 170px;
-  margin-top: 8px;
-  padding: 3px;
-  margin-left: 15px; 
-  margin-top: 20px; 
-}
-
-.knight3{
-  border-style:solid;
-  color: white;
-}
-
-
-.div2 img{   /*imagem do texto CORRA!   */
- float:right;
- position: absolute;
- left: 2415px;
- top: 250px;
- width: 670px;
- height: 350px;
-}
-
-.div2 p{           /*texto: descrição do jogo */
-  position: absolute;
-  top: 590px;
-  left: 2413px;
-  font-size: 30px;
-  text-align: justify;
-  font-family: sans-serif;
-  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
-.hollow{    /*texto: CORRA! ULTIMAS UNIDADES!   */
-  position: absolute;
-  left: 2550px;
-  top: 160px;
-  font-size: 30px;
-  display: flex;
+.div1{
+  width: 70%;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.div2{
+  width: 30%;
+  background-color: aqua;
 }
 
-hr{
-  margin-top: 21px;
+.imagens{
+
+width: 300px;
 }
-
-
-
