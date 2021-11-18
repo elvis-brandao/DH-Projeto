@@ -1,0 +1,96 @@
+.categorias{
+    height: 36px;
+    max-width: 1360px;
+    margin-top: 0;
+    background-color: #07001F;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 20px;
+}
+main > .categorias >nav > ul{
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+main > .categorias > nav > ul > li{
+    display: inline-block;
+}
+main > .categorias > nav > ul > li > a{
+    display: inline-block;
+    padding: 6px 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+main > .categorias > nav > ul > li > a:hover{
+    background-color: #7C78A8;
+}
+main > .categorias > img{
+    position: absolute;
+    width: 16px;
+    right: 8px;
+}
+/* caixa de busca */
+.boxBuscar{
+    background-color: white;
+    width: 225px;
+    height: 20px;
+    border-radius: 20px;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: gray;
+    text-indent: 8px;
+}
+/* Carrossel */
+.mySlides {display: none}
+img {vertical-align: middle;
+}
+.slideshow-container {
+    max-width: 1360px;
+    position: relative;
+    margin: auto;
+}
+/* botões do carrossel */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 20px);
+    width: auto;
+    padding: 16px;
+    margin-top: -32px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+/* dot carrossel */
+.dot {
+    cursor: pointer;
+    height: 9px;
+    width: 9px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    bottom: 20px;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
