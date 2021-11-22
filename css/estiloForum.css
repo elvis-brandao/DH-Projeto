@@ -1,0 +1,241 @@
+main {
+    position: relative;
+    width: 1440px;
+    height: 2150px;
+}
+
+.container {
+    position: absolute;
+    width: 1329px;
+    height: 466px;
+    left: 57px;
+    top: 32px;
+    background: rgba(73, 85, 125, 0.8);
+    border-radius: 20px;
+}
+
+.container > .entrada-forum > .titulo-forum > h1 {
+    position: absolute;
+    width: 690px;
+    height: px;
+    left: 363px;
+    top: 8px;
+    font-size: 35px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.forum-descricao > p {
+    position: absolute;
+    width: 619px;
+    height: 387px;
+    left: 78px;
+    top: 64px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+label {
+    display: block;
+    font: .9rem;
+}
+
+input[type='submit'],
+label {
+    margin-top: 3rem;
+}
+
+label {
+    font-size: 23px;
+}
+
+input[type='text'] {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFFAFA;
+    box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input[type='password'] {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFFAFA;
+    box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+input[type='submit'] {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    background: #C4C4C4;
+    box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.login-forum {
+    position: absolute;
+    width: 622px;
+    height: 54px;
+    left: 758px;
+    top: 64px;
+    font-size: 25px;
+    line-height: 30px;
+    color: rgba(216, 211, 225, 0.47);
+
+}
+
+.conversas-forum > .conversa-um {
+    position: absolute;
+    width: 913px;
+    height: 175px;
+    left: 59px;
+    top: 600px;
+    background: rgba(112, 105, 128, 0.6);
+    border-radius: 0px;
+    
+}
+
+.conversas-forum > .conversa-um > h1 {
+    position: absolute;
+    width: 330px;
+    height: 34px;
+    left: 78px;
+    top: 3px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+}
+.conversas-forum > .conversa-um > h2 {
+    position: absolute;
+    width: 203px;
+    height: 34px;
+    left: 607px;
+    top: 3px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+
+.conversas-forum > .conversa-dois {
+    position: absolute;
+    width: 913px;
+    height: 175px;
+    left: 59px;
+    top: 777px;
+    background: rgba(112, 105, 128, 0.6);
+    border-radius: 0px;
+}
+
+.conversas-forum > .conversa-dois > h1 {
+    position: absolute;
+    width: 330px;
+    height: 34px;
+    left: 78px;
+    top: 10px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.conversas-forum > .conversa-dois > h2 {
+    position: absolute;
+    width: 203px;
+    height: 34px;
+    left: 607px;
+    top: 10px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.conversas-forum > .conversa-tres {
+        position: absolute;
+        width: 913px;
+        height: 955px;
+        left: 59px;
+        top: 955px;
+        background: rgba(112, 105, 128, 0.6);
+        border-radius: 0px;
+}
+
+.conversas-forum > .conversa-tres > h1 {
+    position: absolute;
+    width: 330px;
+    height: 34px;
+    left: 78px;
+    top: 10px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.conversas-forum > .conversa-tres > h2 {
+    position: absolute;
+    width: 203px;
+    height: 34px;
+    left: 607px;
+    top: 10px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.conversas-forum > .conversa-quatro > h1 {
+    position: absolute;
+    width: 330px;
+    height: 34px;
+    left: 78px;
+    top: 1310px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.conversas-forum > .conversa-quatro > h2 {
+    position: absolute;
+    width: 203px;
+    height: 34px;
+    left: 607px;
+    top: 1310px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.conversas-forum > .conversa-cinco > h1 {
+    position: absolute;
+    width: 330px;
+    height: 34px;
+    left: 78px;
+    top: 1485px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.conversas-forum > .conversa-cinco > h2 {
+    position: absolute;
+    width: 203px;
+    height: 34px;
+    left: 607px;
+    top: 1485px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+ 
+
+
+
