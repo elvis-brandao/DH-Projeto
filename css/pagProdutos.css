@@ -1,24 +1,141 @@
+main{
+height: 1090px;
+display: flex;
+}
+
 .pai{
-  max-width: 1360px;
-  display: flex;
+margin-left: auto;
+margin-right: auto;
+gap: 3px;
+}
+
+.pai{
+  display: grid;
   margin-left: auto;
   margin-right: auto;
-
-}
-
-.div1{
-  width: 70%;
+  height: 90%;
+  width: 40%;
   background-color: red;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows:   1fr 1fr 1fr 1fr  ;
+  font-size: 30px;
+  
+  
+ }
+ .pai div:nth-child(1){
+  background-image: url(/img/hollow_knight.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1 ;
+  grid-row-end: 4 ;
+
+ }
+ .pai div:nth-child(2){
+  background-image: url(/img/hollow-knight.jfif);
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+    
+}
+ .pai div:nth-child(2) image{
+  border: solid 2px white; /*COMO INSERIR BORDA SOMENTE NA IMAGEM FILHO DA PAI?   */
+ }
+
+   
+
+
+
+ .pai div:nth-child(2) img{
+  border: solid 2px white;
 
 }
+
+
+
+ .pai div:nth-child(3){
+  background-image: url(/img/images.jfif);
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+ }
+ .pai div:nth-child(4){
+  background-image: url(/img/hollow-knight2.jpg);
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+ }
+ .pai div:nth-child(5){
+  background-image: url(/img/images\ \(4\).jfif);
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+ }
+ .pai div:nth-child(6){
+  background-image: url(/img/hollowknight3.jpg);
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+ }
+
+ .pai div:nth-child(2):hover{
+   cursor: pointer;
+   transform: scale(1.3);
+   border: solid 4px white;
+ }
+
+ .pai div:nth-child(2):hover{
+  cursor: pointer;
+  background-size: 100% 100%;
+  transform: scale(1.3);
+  border: solid 4px white;
+
+}
+.pai div:nth-child(3):hover{
+  cursor: pointer;
+  background-size: 100% 100%;
+  transform: scale(1.3);
+  border: solid 4px white;
+}
+.pai div:nth-child(4):hover{
+  cursor: pointer;
+  background-size: 100% 100%;
+  transform: scale(1.3);
+  border: solid 4px white;
+}
+.pai div:nth-child(5):hover{
+  cursor: pointer;
+  background-size: 100% 100%;
+  transform: scale(1.3);
+  border: solid 4px white;
+}
+.pai div:nth-child(6):hover{
+  cursor: pointer;
+  
+  transform: scale(1.3);
+  border: solid 4px white;
+}
+
+
+
+
+
+
 .div2{
-  width: 30%;
   background-color: aqua;
+  background-image: url(../img/hollow-knight.jfif);
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 735px;
+  position: absolute;
+  left: 2135px;
+
 }
 
-.imagens{
+p{   /*texto da div2 */
+  position: relative; /*move o p com relação a div2 e não com relação ao main */
+  top: 250px;
+  text-align: justify;
+  font-size: 30px;
 
-width: 300px;
 }
+
+
+
+
