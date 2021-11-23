@@ -1,123 +1,432 @@
-main{
-height: 1090px;
-display: flex;
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
+    box-sizing: border-box;
 }
-
-.pai{       /*.pai é a div vermelha  */
-margin-left: auto;
-margin-right: auto;
-gap: 3px;
+body{
+    margin: 0;
+}
+.logo{
+    height: 64px;
+    margin-left: 8px;
+    margin-top: 1px;
+}
+.botoesHeader{
+    background: #54539c;
+    border-radius: 7px;
+    padding: 10px;
+    color: #ffff;
+    border: none;
+    font-size: 18px;
+    margin-right: 24px;
+    position: absolute;
+    right: 0px;
+    top: calc(50% - 20px);
+}
+.botoesHeader:hover{
+  background-color: #7C78A8;
+}
+header > .containerHeader > nav > ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+header > .containerHeader > nav > ul > li{
+    display: inline-block;
+}
+header > .containerHeader > nav > ul > li > a{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+header > .containerHeader > nav > ul > li > a:hover{
+  background-color: #7C78A8;
+}
+.containerHeader{
+  max-width: 1360px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+header{
+    /* display: flex;
+    align-items: center; */
+    height: 66px;
+    background-color:  #07001F;
+    /* position: relative; */
+    /* max-width: 1360px; */
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+main{
+    background-color: rgb(33,48,70);
+    background-color: linear-gradient(180deg, rgba(33,48,70,1) 70%, rgba(23,36,55,0.78) 90%, rgba(48,80,129,0.68) 100%);
+    max-width: 100%;
+    height: 1120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pai{         /*.pai é a div vermelha  */
   display: grid;
-  margin-left: auto;
+  margin-left: 780px;
   margin-right: auto;
-  height: 90%;
-  width: 40%;
+  margin-top: 65px;
+  height: 700px;
+  width: 1310px;
   background-color: red;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 900px 500px;
   grid-template-rows:   1fr 1fr 1fr 1fr  ;
   font-size: 30px;
-  
-  
-  
- }
- .pai div:nth-child(1){
-  background-image: url(/img/hollow_knight.jpeg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  gap: 4px;
+}
+.pai div:nth-child(1){
   grid-column-start: 1;
-  grid-column-end: 6;
+  grid-column-end: 4;
   grid-row-start: 1 ;
   grid-row-end: 4 ;
-
+  
  }
+ 
  .pai div:nth-child(2){
-  background-image: url(/img/hollow-knight.jfif);
-  background-repeat: no-repeat;
-  background-size: 90% 90%;
-}
-
-
-.pai:nth-child(2){
-
-  border: solid 3px white;
-}
-
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4 ;
+  grid-row-end: 5 ;
+  
+ }
 
  .pai div:nth-child(3){
-  background-image: url(/img/images.jfif);
-  background-repeat: no-repeat;
-  background-size: 90% 90%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4 ;
+  grid-row-end: 5 ;
+  
+
  }
+
  .pai div:nth-child(4){
-  background-image: url(/img/hollow-knight2.jpg);
-  background-repeat: no-repeat;
-  background-size: 90% 90%;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4 ;
+  grid-row-end: 5 ;
+  justify-content: space-between;  
+  
  }
+
  .pai div:nth-child(5){
-  background-image: url(/img/images\ \(4\).jfif);
-  background-repeat: no-repeat;
-  background-size: 90% 90%;
- }
- .pai div:nth-child(6){
-  background-image: url(/img/hollowknight3.jpg);
-  background-repeat: no-repeat;
-  background-size: 90% 90%;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1 ;
+  grid-row-end: 5 ;
+  background-color: green;
+
  }
 
- .pai div:nth-child(2):hover{
-  cursor: pointer;
-  background-size: 100% 100%;
-  transform: scale(1.3);
-  border: solid 4px white;
 
-}
-.pai div:nth-child(3):hover{
-  cursor: pointer;
-  background-size: 100% 100%;
-  transform: scale(1.3);
-  border: solid 4px white;
-}
-.pai div:nth-child(4):hover{
-  cursor: pointer;
-  background-size: 100% 100%;
-  transform: scale(1.3);
-  border: solid 4px white;
-}
-.pai div:nth-child(5):hover{
-  cursor: pointer;
-  background-size: 100% 100%;
-  transform: scale(1.3);
-  border: solid 4px white;
-}
-.pai div:nth-child(6):hover{
-  cursor: pointer;
-  background-size: 100% 100%;
-  transform: scale(1.3);
-  border: solid 4px white;
-}
-
-.div2{
-  background-color: aqua;
-  background-image: url(../img/hollow-knight.jfif);
-  background-repeat: no-repeat;
-  width: 500px;
-  height: 735px;
+.p1{
+  color: white;
   position: absolute;
-  left: 2135px;
+  left: 780px;
+  top:95px;
+  font-size: 25px;
 
 }
-
-p{   /*texto da div2 */
-  position: relative; /*move o p com relação a div2 e não com relação ao main */
-  top: 250px;
+.p2{
+  color: white;
+  position: absolute;
+  left: 780px;
+  top: 130px;
+  font-size: 60px;
+}
+.ptexto{
+  color:white;
+  font-size: 20px;
   text-align: justify;
-  font-size: 30px;
+}
 
+.reta{
+  background-color:rgb(52, 62, 90);
+  position:absolute;
+  top: 950px;
+  left: 0px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  ;
+}
+.reta p{
+  color: white;
+  font-size: 30px;
+}
+.rp1{
+  position: absolute;
+  left: 780px;
+}
+.rp2{
+  position: absolute;
+  left: 1000px;
+}
+.rp3{
+  position: absolute;
+  left: 1100px;
+}
+ .img1{
+   height: 510px;
+   width: 970px;
+   margin-left: 3px;
+   margin-top: 3px;
+ }
+ .img2{
+  height: 150px;
+  width: 290px;
+  margin-left: 5px;
+  margin-top: 3px;
+  
+  
+}
+.img3{
+  height: 150px;
+  width: 290px;
+  margin-left: 10px;
+  margin-top: 3px;
+  margin-left: 15px;
+}
+.img4{
+  height: 150px;
+  width: 290px;
+  margin-left: 10px;
+  margin-top: 3px;
+  margin-left: 15px;
+}
+ 
+
+.img5{
+  height: 250px;
+  width: 490px;
+  margin-left: 7px;
+  margin-top: 3px;
+}
+
+ 
+
+ 
+  
+ 
+  
+
+p{
+  margin: 0px;
+}
+
+.containerFooter{
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-footer{
+  background-color:#07001F;
+  padding:20px 13px 20px 13px;
+  font-size:16px;
+  color: white;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.linha1{
+    display: flex;
+}
+.linha2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.col1{
+    width: 650px;
+    text-align: justify;
+    margin-right: 50px;
+}
+.col2{
+    width: 200px;
+}
+.col3{
+    width: 200px;
+}
+.site-footer hr{
+  border-top-color:#7C78A8;
+  opacity:0.5;
+}
+.site-footer hr.small
+{
+  margin:20px 0;
+}
+.site-footer h6
+{
+  color:white;
+  font-size:20px;
+  text-transform:uppercase;
+  margin-top:0px;
+  margin-bottom: 0;
+}
+.footer-links{
+  padding-left: 0;
+  list-style: none;
+}
+.footer-links li{
+  display: block;
+}
+.footer-links a{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover{
+  color:#7C78A8;
+  text-decoration :none;
+}
+
+.site-footer .social-icons a{
+  width:40px;
+  height:40px;
+  margin-left:8px;
+  border-radius:100%;
+  display:inline-block;
+}
+.copyright-text{
+  margin: 0;
+}
+.social-icons{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none;
+}
+.social-icons li{
+  display:inline-block;
+}
+.facebook{
+  background-image: url("https://seeklogo.com/images/F/facebook-logo-966BBFBC34-seeklogo.com.png");
+  background-size: cover;
+}
+.instagram{
+  background-image: url("https://seeklogo.com/images/I/instagram-logo-3368394263-seeklogo.com.jpg");
+  background-size: cover;
+}
+.whatsapp{
+  background-image: url("https://seeklogo.com/images/W/whatsapp-icon-logo-BDC0A8063B-seeklogo.com.png");
+  background-size: cover;
 }
 
 
 
 
+@media (max-width: 540px){
+  .logo{
+    height: 24px;
+    margin-left: 1px;
+    margin-top: 1px;
+  }
+  .botoesHeader{
+    font-size: 11px;
+    margin-right: 2px;
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    border-radius: 4px;
+    padding: 3px;
+  }
+  header > .containerHeader > nav > ul > li > a{
+    padding: 4px 4px;
+    color: white;
+    font-size: 11px;
+  }
+  header{
+    height: 25px;
+  }
+
+  .site-footer{
+    padding:10px 7px 10px 7px;
+    font-size:8px;
+  }
+  .col1{
+    width: 60%;
+    margin-right: 8px;
+  }
+  .col2{
+    width: 20%;
+  }
+  .col3{
+    width: 20%;
+  }
+  site-footer hr.small{
+    margin:5px 0;
+  }
+  .site-footer h6{
+    font-size:9px;
+  }
+  .footer-links a{
+    font-size: 8px;
+  }
+  .site-footer .social-icons a{
+    width:16px;
+    height:16px;
+    margin-left:4px;
+  }
+}
+@media (max-width: 1359px){
+  .logo{
+    height: 34px;
+    margin-left: 1px;
+    margin-top: 1px;
+  }
+  .botoesHeader{
+    font-size: 14px;
+    margin-right: 4px;
+    right: 2px;
+    top: calc(50% - 11px);
+    border-radius: 10px;
+    padding: 3px;
+  }
+  header > .containerHeader > nav > ul > li > a{
+    padding: 6px 6px;
+    color: white;
+    font-size: 14px;
+  }
+  header{
+    height: 36px;
+  }
+
+  .site-footer{
+    padding:10px 7px 10px 7px;
+    font-size:10px;
+  }
+  .col1{
+    width: 60%;
+    margin-right: 16px;
+  }
+  .col2{
+    width: 15%;
+  }
+  .col3{
+    width: 25%;
+  }
+  site-footer hr.small{
+    margin:8px 0;
+  }
+  .site-footer h6{
+    font-size:11px;
+  }
+  .footer-links a{
+    font-size: 10px;
+  }
+  .site-footer .social-icons a{
+    width:20px;
+    height:20px;
+    margin-left:8px;
+  }
+}
