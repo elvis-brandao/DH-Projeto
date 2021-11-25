@@ -68,7 +68,7 @@ main{
     background-color: rgb(33,48,70);
     background-color: linear-gradient(180deg, rgba(33,48,70,1) 70%, rgba(23,36,55,0.78) 90%, rgba(48,80,129,0.68) 100%);
     max-width: 100%;
-    height: 1120px;
+    height: 1700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -151,31 +151,47 @@ main{
   text-align: justify;
 }
 
-.reta{
+.reta{ /* 1º Div das 3 frases*/
   background-color:rgb(52, 62, 90);
   position:absolute;
-  top: 950px;
-  left: 0px;
-  width: 100%;
-  height: 70px;
+  top: 920px;
+  left: 770px;
+  width: 1430px;
+  height: 60px;
   display: flex;
   ;
 }
-.reta p{
+
+.rp1{  /*frase lista de desejos */
+  position: absolute;
+  left: 0px;
+  top: 15px;
   color: white;
   font-size: 30px;
 }
-.rp1{
+.rp2{    /*frase A seguir */
   position: absolute;
-  left: 780px;
+  left: 240px;
+  top: 15px;
+  color: white;
+  font-size: 30px;
 }
-.rp2{
+
+.rp3{    /*frase Ignorar */
   position: absolute;
-  left: 1000px;
+  left: 370px;
+  top: 15px;
+  color: white;
+  font-size: 30px;
 }
-.rp3{
+
+
+.rp4{  /*frase ver sua lista */
   position: absolute;
-  left: 1100px;
+  left: 1260px;
+  top: 20px;
+  color: white;
+  font-size: 30px;
 }
  .img1{
    height: 510px;
@@ -214,16 +230,71 @@ main{
   margin-top: 3px;
 }
 
- 
-
- 
-  
- 
-  
-
+.chn{ /* 2ª Div da frase Comprar Hollow Knight */
+  background-color: rgb(52, 62, 90) ;
+  color:white;
+  font-size: 40px;
+  position: absolute;
+  top: 1020px;
+  height: 60px;
+  left: 770px;
+  width: 1430px;
+}
+.comprar{ /*frase Comprar Hollow Knight */
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  left: 0px;
+  top: 5px;
+}
 p{
   margin: 0px;
 }
+
+.ofertas{  /*3ª Div - Ofertas */
+  background: rgb(52, 62, 90);
+  position: absolute;
+  top: 1110px;
+  left: 770px;
+  width: 1430px;
+  height: 60px;
+}
+.p_ofertas{   /*frase Ofertas  */
+  color:white;
+  font-size: 40px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+
+}
+
+.esquerda{   
+  background-color:yellow;
+  width: 25%;
+  position: absolute;
+  left: 770px;
+  top: 1210px;
+  height: 400px;
+  background-color: rgb(52, 62, 90);
+  
+}
+.direita{
+  background-color: pink;
+ width: 645px;
+ position: absolute;
+ left: 1550px;
+ top: 1210px;
+ height: 400px;
+ background-color:rgb(52, 62, 90)
+ 
+}
+
+
+
+
+
+
+
 
 .containerFooter{
   max-width: 1360px;
