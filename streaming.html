@@ -33,102 +33,84 @@
       </div>
     </header>
     <main>
-    <div class="slideshow-container">
-      <div id="itemsWrapper">
-        <div id="items">
-          <div class="item">
-            <img src="/img/rafa-img/Imagens carrossel (6).jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="/img/rafa-img/Live2.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="/img/rafa-img/lives3.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="/img/rafa-img/lives4 (1).jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="/img/rafa-img/Imagens carrossel (4).jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="/img/rafa-img/Imagens carrossel (5).jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="/img/rafa-img/Imagens carrossel (10).JPG" alt="" />
-          </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="./img/rafa-img/Imagens carrossel (6).jpg" style="width:100%">
         </div>
-      </div>
-      </div>
-      <script>
-        document.querySelector("#items").addEventListener("wheel", (event) => {
-          if (event.deltaY > 0) {
-            event.target.scrollBy(250, 0);
-          } else {
-            event.target.scrollBy(-250, 0);
-          }
-        });
-      </script>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      <div style="text-align: center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-      <script>
+        <div class="mySlides fade">
+          <img src="./img/rafa-img/Live2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="./img/rafa-img/lives3.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="./img/rafa-img/lives4 (1).jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <script>
         var slideIndex = 1;
-        itemsWrapper(slideIndex);
+        showSlides(slideIndex);
+
         function plusSlides(n) {
-          itemsWrapper((slideIndex += n));
+          showSlides(slideIndex += n);
         }
+
         function currentSlide(n) {
-          itemsWrapper((slideIndex = n));
+          showSlides(slideIndex = n);
         }
-        function itemsWrapper(n) {
+
+        function showSlides(n) {
           var i;
           var slides = document.getElementsByClassName("mySlides");
           var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {
-            slideIndex = 1;
-          }
-          if (n < 1) {
-            slideIndex = slides.length;
-          }
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
           for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+              slides[i].style.display = "none";
           }
           for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+              dots[i].className = dots[i].className.replace(" active", "");
           }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
         }
-      </script>
-      <div class="categorias">
-        <nav>
+        </script>
+    </div>
+    <div class = "categorias">
+      <nav>
           <ul>
-            <li><a href="">PC</a></li>
-            <li><a href="">XBOX</a></li>
-            <li><a href="">PLAYSTATION</a></li>
-            <li><a href="">NINTENDO</a></li>
-            <li><a href="">INDIES</a></li>
+              <li><a href="">PC</a></li>
+              <li><a href="">XBOX</a></li>
+              <li><a href="">PLAYSTATION</a></li>
+              <li><a href="">NINTENDO</a></li>
+              <li><a href="">INDIES</a></li>
           </ul>
-        </nav>
-        <div class="boxBuscar">Buscar</div>
-        <img src="./img/lupa.png" alt="" />
-      </div>
-      <div class = "boxCentral">
-        <div class = "headStreaming">
-          <img class="jogosheadStreaming"src="./img/hollow-knight.jfif" alt="">
-          <div>
-            <h4>Hollow Knight</h4>
-            <p>Espectadores 999 ● Seguidores 999</p>
-            <div>
-              <button id="seguir">SEGUIR <img class="follow" src="img/rafa-img/white-heart-137.png" alt=""></button>
-            </div>
-          </div>
+      </nav>
+      <div class = "boxBuscar">Buscar</div>
+      <img src="./img/lupa.png" alt="">
+  </div>
+  <div class = "boxCentral">
+    <div class = "emAlta">
+      <img src="./img/hollow-knight.jfif" alt="">
+      <div class="textJogo">
+        <div><h3>Hollow Knight</h3>
+        <p>Espectadores 999 ● Seguidores 999 </p>
         </div>
+        <button class="seguir">Seguir <img src="img/rafa-img/white-heart-137.png"> </button>
+      </div>
+    </div>
+    <div class="blocoCarrossel">
+      <div id="Aovivo"><h3>Canais Aovivo</h3></div>
+      <div id='Videos'><h3>Vídeos</h3></div>
+    </div>
     </main>
 
     <footer class="site-footer">
