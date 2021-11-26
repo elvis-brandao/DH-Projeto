@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+main {
+  height: 2000px;
 }
 .categorias {
   height: 66px;
@@ -54,14 +56,14 @@ main > .categorias > img {
 .boxCentral {
   max-width: 1360px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-left: auto;
   margin-right: auto;
 }
 .emAlta {
   display: flex;
   height: 100%;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   margin-right: auto;
   padding-left: 15px;
 }
@@ -85,6 +87,8 @@ div > .textJogo{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 5px;
 }
 div > .seguir {
   width: 40%;
@@ -92,8 +96,8 @@ div > .seguir {
   border-radius: 8px;
   border-style: none;
   align-items: center;
-  margin-left: 5px;
-  padding: 5px;
+  margin-bottom: 5px;
+  padding: 8px;
   padding-left: 5px;
   background-color: rgba(7, 0, 31, 0.46);
 }
@@ -107,12 +111,79 @@ div > .seguir > img {
 .blocoCarrossel {
   display: flex;
   flex-direction: column;
-  background-color:#555;
+
 }
 .blocoCarrossel > #Aovivo{
   display: flex;
-  justify-content:start;
+  justify-content: space-around;
 }
+h3 > img {
+  width: 30px;
+  height: 30px;
+}
+.Live {
+  display: flex;
+  width: 325px;
+  height: 178px;
+  outline: 5px solid black;
+  overflow: hidden;
+  margin: 50px auto;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+}
+.Live > ul {
+  display: flex;
+  list-style: none;
+  width:1300px;
+  height: 180px;
+}
+.Live li{
+  position: relative;
+  animation: slide 15s infinite ease-out;
+}
+
+@keyframes slide{
+  0%{left: 0px}
+  15%{left: 0px}
+  25%{left: -325px}
+  40%{left: -325px}
+  50%{left: -650px}
+  65%{left: -650px}
+  75%{left: -975px}
+  90%{left: -975px}
+  100%{left: 0px}
+}
+.gamePlay {
+  display: flex;
+  width: 360px;
+  height: 200px;
+  outline: 4px solid black;
+  overflow: hidden;
+  margin: 50px auto;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+}
+.gamePlay > ul {
+  display: flex;
+  list-style: none;
+  width:1300px;
+  height: 180px;
+}
+.gamePlay li{
+  position: relative;
+  animation: slide1 15s infinite ease-out;
+}
+
+@keyframes slide1{
+  0%{left: 0px}
+  15%{left: 0px}
+  25%{left: -360px}
+  40%{left: -360px}
+  50%{left: -720px}
+  65%{left: -720px}
+  75%{left: -1080px}
+  90%{left: -1080px}
+  100%{left: 0px}
+}
+
 
 /* Código Carrossel */
 .mySlides {
@@ -128,6 +199,7 @@ img {
   position: relative;
   margin: auto;
   width: 1000px;
+  transform-style: preserve-3d ;
   box-shadow: 33px 0 15px #07001f, -33px 0 15px #07001f;
 }
 /* Next & previous buttons */
