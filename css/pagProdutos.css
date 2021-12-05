@@ -146,11 +146,13 @@ main{
   left: 780px;
   top: 130px;
   font-size: 60px;
+  font-family: rosarivo;
 }
 .ptexto{
   color:white;
   font-size: 20px;
   text-align: justify;
+  font-family: rosarivo;
 }
 
 .reta{ /* 1º Div das 3 frases*/
@@ -243,7 +245,7 @@ main{
   display: flex;    /*para posicionar elementos DIV's Filho, dentro de outra Div Pai, primeiro fazer Diplay: Flex */
   background-color: rgb(52, 62, 90) ;
   color:white;
-  font-size: 40px;
+  font-size: 35px;
   position: absolute;
   top: 1040px;
   height: 80px;
@@ -251,12 +253,14 @@ main{
   width: 767px;
   justify-items: center; /* posiciona no centro horizontalmente   */
  align-items: center; /* posiciona no centro verticalmente   */
+ font-family: rosarivo;
 
 
 }
 .comprar{ /*Div da frase: Comprar Hollow Knight */
   color: white;
   font-size: 40px;
+  font-family: rosarivo;
   
 }
 .comprar2{
