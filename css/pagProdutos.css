@@ -77,12 +77,12 @@ main{
   display: grid;
   margin-left: 780px;
   margin-right: auto;
-  margin-top: 65px;
+  margin-top: 100px;
   height: 700px;
   width: 1310px;
-  background-color: red;
-  grid-template-columns: 1fr 1fr 900px 500px;
-  grid-template-rows:   1fr 1fr 1fr 1fr  ;
+  background-color: rgb(33,48,70);
+  grid-template-columns: 1fr 1fr 880px 500px;
+  grid-template-rows:   1fr 1fr 1fr 10px ;
   font-size: 30px;
   gap: 4px;
 }
@@ -99,6 +99,7 @@ main{
   grid-column-end: 2;
   grid-row-start: 4 ;
   grid-row-end: 5 ;
+  
   
  }
 
@@ -118,6 +119,7 @@ main{
   grid-row-end: 5 ;
   justify-content: space-between;  
   
+  
  }
 
  .pai div:nth-child(5){
@@ -125,7 +127,7 @@ main{
   grid-column-end: 6;
   grid-row-start: 1 ;
   grid-row-end: 5 ;
-  background-color: green;
+  background-color: grgb(33,48,70);
 
  }
 
@@ -154,7 +156,7 @@ main{
 .reta{ /* 1º Div das 3 frases*/
   background-color:rgb(52, 62, 90);
   position:absolute;
-  top: 920px;
+  top: 950px;
   left: 770px;
   width: 1430px;
   height: 60px;
@@ -193,33 +195,40 @@ main{
   color: white;
   font-size: 30px;
 }
- .img1{
-   height: 510px;
-   width: 970px;
+ .img1{        /* primeira imagem maior do hollow knigth  */
+   height: 520px;
+   width: 882px;
    margin-left: 3px;
    margin-top: 3px;
  }
- .img2{
+ .img2{   /* mini imagem amarelada */
   height: 150px;
   width: 290px;
   margin-left: 5px;
   margin-top: 3px;
+  position: absolute;
+  top: 756px;
   
   
 }
-.img3{
+.img3{  /* mini imagem vermelha */
+  height: 150px;
+  width: 290px;
+  position: absolute;
+  top: 758px;
+  left: 1080px;
+
+}
+.img4{   /* mini imagem verde */
   height: 150px;
   width: 290px;
   margin-left: 10px;
   margin-top: 3px;
   margin-left: 15px;
-}
-.img4{
-  height: 150px;
-  width: 290px;
-  margin-left: 10px;
-  margin-top: 3px;
-  margin-left: 15px;
+  position: absolute;
+  top: 756px;
+  left: 1360px;
+
 }
  
 
@@ -230,55 +239,85 @@ main{
   margin-top: 3px;
 }
 
-.chn{ /* 2ª Div da frase Comprar Hollow Knight */
+.segundaDiv{ /* 2ª Div da frase Comprar Hollow Knight */  
+  display: flex;    /*para posicionar elementos DIV's Filho, dentro de outra Div Pai, primeiro fazer Diplay: Flex */
   background-color: rgb(52, 62, 90) ;
   color:white;
   font-size: 40px;
   position: absolute;
-  top: 1020px;
-  height: 60px;
+  top: 1040px;
+  height: 80px;
   left: 770px;
-  width: 1430px;
+  width: 731px;
+  justify-items: center; /* posiciona no centro horizontalmente   */
+ align-items: center; /* posiciona no centro verticalmente   */
+
+
 }
-.comprar{ /*frase Comprar Hollow Knight */
+.comprar{ /*Div da frase: Comprar Hollow Knight */
   color: white;
   font-size: 40px;
-  position: absolute;
-  left: 0px;
-  top: 5px;
 }
 p{
   margin: 0px;
 }
 
-.ofertas{  /*3ª Div - Ofertas */
+.p3{   /* valor  R$ 99,99 */
+ display: flex;
+  
+  font-size: 25px;
+  align-content: flex-start;
+  margin-left: 0px;
+  font-style: normal;
+  font-family: rosarivo;
+  color: white;
+}
+.melhorOferta{
+  color: white;
+  position: absolute;
+  left: 1225px;
+  font-size: 25px;
+  top: 1038px;
+  font-family: rosarivo;
+}
+
+
+.terceiraDiv{  /*3ª Div da frase: Ofertas */
   background: rgb(52, 62, 90);
   position: absolute;
-  top: 1110px;
+  top: 1150px;
   left: 770px;
-  width: 1430px;
+  width: 730px;
   height: 60px;
+
 }
+.fraseComprarHollow{
+  font-family: rosarivo;
+font-size: 30px;
+}
+
+
 .p_ofertas{   /*frase Ofertas  */
-  color:white;
-  font-size: 40px;
+  color:#FFFFFF;
+  font-size: 35px;
   position: absolute;
-  top: 5px;
-  left: 0px;
-
+  top: 10px;
+  left: 150px;
+  font-family: rosarivo;
+  
 }
 
-.esquerda{   
-  background-color:yellow;
+
+.DivPaiVendedores{   
   width: 25%;
   position: absolute;
   left: 770px;
-  top: 1210px;
+  top: 1250px;
   height: 400px;
   background-color: rgb(52, 62, 90);
   
 }
-.direita{
+.Divdireita{  
   background-color: pink;
  width: 645px;
  position: absolute;
@@ -289,8 +328,308 @@ p{
  
 }
 
+.divPreta{   /*div Preta, do valor R$ 99,99 */
+   display: flex;
+    background-color: black;
+    width: 213px;
+    height: 50px;
+    font-size: 18px;
+    font-family:    rosarivo;
+   justify-content: start; /*  posiciona o R$ 99,99 horizontalmente no centro da Div Preta */
+  align-items: center;
+   position: relative;
+  left: 1230px;
+  top: 140px;
+  }
 
 
+  .divVerde{   /*  Div verde que tem o  +Carrinho   */
+    display: flex;
+  background-color:#005C14;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  left: 1350px;
+  top: 1070px;
+ font-family: rosarivo;
+ font-size: 30px;
+ font-style: normal;
+ align-items: center;
+  }
+
+  .palavraCarrinho{
+    display: flex;
+    margin-left: 13px;
+    font-family: rosarivo;
+    font-style: normal;
+   font-size: 25px;
+   color: white;
+  }
+
+  
+  .tag{
+background-color: rgb(52, 62, 90);
+width: 150px;
+height: 60px;
+position:absolute;
+top: 1150px;
+left: 770px;
+  }
+
+  .titulos{
+color: white;
+display: flex;
+ flex-direction: row; 
+ gap: 30px;
+ flex-grow: 5px;
+font-size: 25px;
+font-family: rosarivo;
+
+  }
+.menorPreco{
+  
+  font-family: rosarivo;
+  font-size:  20px;
+  position: absolute;
+  left: 570px;
+  top: 1px;
+  font-style: italic;
+  }
+  .botao{
+    background-image: url(/img/botões.png);
+    position: absolute;
+    left: 705px;
+    width: 30px;
+    height: 20px;
+    top: 6px;
+  }
+
+.games{
+ display: flex;
+  width: 760px;
+  height: 55px;
+  background-color: rgb(23, 40, 65);;
+  font-family: rosarivo;
+  top: 800px;
+  left: 10px;
+  gap: 20px;
+   color: white;
+  font-size: 25px;
+
+}
+
+.classificacao{
+display: flex;
+top: 300px;
+left: 200px;
+
+  
+}
+
+.vendas{
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.preco{
+  margin-left: 12px;
+  margin-top: 10px;
+}
+
+.filtradoPor{
+  margin-left: 20px;
+}
+
+.vendedor2{
+  display: flex;
+  background-color: rgb(52, 62, 90);
+  width: 760px;
+  height: 55px;
+  margin-bottom: 5px;
+  gap: 20px;
+  
+  font-family: rosarivo;
+  font-style:normal; 
+  width: 760px;
+  height: 60px;
+  color: white;
+  font-size: 25px;
+}
+.vendedor3{
+ 
+  display: flex;
+  background-color: rgb(23, 40, 65);
+  width: 760px;
+  height: 55px;
+   gap: 20px;
+  
+  font-family: rosarivo;
+  font-style:normal; 
+  width: 760px;
+  height: 60px;
+  color: white;
+  font-size: 25px;
+}
+.vendedor4{
+  
+  width: 760px;
+  height: 55px;
+  margin-bottom: 5px;
+  display: flex;
+  background-color: rgb(52, 62, 90);
+  width: 760px;
+  height: 55px;
+  margin-bottom: 5px;
+  gap: 20px;
+  
+  font-family: rosarivo;
+  font-style:normal; 
+  width: 760px;
+  height: 60px;
+  
+  color: white;
+  font-size: 25px;
+}
+.vendedor5{
+  
+  width: 760px;
+  height: 55px;
+  margin-bottom: 5px;
+  display: flex;
+  
+  width: 760px;
+  height: 55px;
+  margin-bottom: 5px;
+  gap: 20px;
+  background-color:  rgb(23, 40, 65);
+  font-family: rosarivo;
+  font-style:normal; 
+  width: 760px;
+  height: 60px;
+  
+  color: white;
+  font-size: 25px;
+}
+.vendedor6{
+  
+  width: 760px;
+  height: 55px;
+  display: flex;
+  background-color: rgb(52, 62, 90);
+  width: 760px;
+  height: 55px;
+  margin-bottom: 5px;
+  gap: 20px;
+  
+  font-family: rosarivo;
+  font-style:normal; 
+  width: 760px;
+  height: 60px;
+  color: white;
+  font-size: 25px;
+}
+
+.divVerde2{  /* Div verde que tem o carrinho de compras   */
+  display: flex;
+  position: absolute;
+  
+  background-color: green;
+  width: 195px;
+  height: 50px;
+  left: 550px;
+  justify-content: center;  /*(justify-content: posiciona elementos no lado direto)          AO POSICIONAR ELEMENTOS DA DIV, DEVE TER ESSAS DUAS PROPRIEDADES JUNTAS: O Justify-content e o Align-items                                           */
+  align-items: center;          /*(align-items: centraliza os elementos no top, no meio ou no final do lado direito )*/
+  
+    
+  }
+  .divVerde3{  /* Div verde que tem o carrinho de compras   */
+    display: flex;
+    position: absolute;
+    background-color: green;
+    width: 195px;
+    height: 55px;
+    left: 550px;
+    justify-content: center;  /*(justify-content: posiciona elementos no lado direto)          AO POSICIONAR ELEMENTOS DA DIV, DEVE TER ESSAS DUAS PROPRIEDADES JUNTAS: O Justify-content e o Align-items                                           */
+    align-items: center;          /*(align-items: centraliza os elementos no top, no meio ou no final do lado direito )*/
+    }
+    .divVerde4{  /* Div verde que tem o carrinho de compras   */
+      display: flex;
+      position: absolute;
+      background-color: green;
+      width: 195px;
+      height: 55px;
+      left: 520px;
+      justify-content: center;  /*(justify-content: posiciona elementos no lado direto)          AO POSICIONAR ELEMENTOS DA DIV, DEVE TER ESSAS DUAS PROPRIEDADES JUNTAS: O Justify-content e o Align-items                                           */
+      align-items: center;          /*(align-items: centraliza os elementos no top, no meio ou no final do lado direito )*/
+      }   
+      .divVerde5{  /* Div verde que tem o carrinho de compras   */
+        display: flex;
+        position: absolute;
+        background-color: green;
+        width: 195px;
+        height: 55px;
+        left: 520px;
+        justify-content: center;  /*(justify-content: posiciona elementos no lado direto)          AO POSICIONAR ELEMENTOS DA DIV, DEVE TER ESSAS DUAS PROPRIEDADES JUNTAS: O Justify-content e o Align-items                                           */
+        align-items: center;          /*(align-items: centraliza os elementos no top, no meio ou no final do lado direito )*/
+        }
+        .divVerde6{  /* Div verde que tem o carrinho de compras   */
+          display: flex;
+          position: absolute;
+          background-color: green;
+          width: 195px;
+          height: 55px;
+          left: 520px;
+          justify-content: center;  /*(justify-content: posiciona elementos no lado direto)          AO POSICIONAR ELEMENTOS DA DIV, DEVE TER ESSAS DUAS PROPRIEDADES JUNTAS: O Justify-content e o Align-items                                           */
+          align-items: center;          /*(align-items: centraliza os elementos no top, no meio ou no final do lado direito )*/
+          }
+
+
+
+.carrinho{
+  position: absolute;
+  left: 540px;
+  top: 30px;
+  height: 48px;
+}
+.carrinho6{
+  position: absolute;
+  left: 540px;
+  top: 336px;
+  height: 48px;
+}
+.carrinho3{
+  position: absolute;
+  left: 540px;
+  top: 150px;
+  height: 48px;
+}
+.carrinho4{
+  position: absolute;
+  left: 540px;
+  top: 208px;
+  height: 48px;
+}
+
+.carrinho5{
+  position: absolute;
+  left: 540px;
+  top: 273px;
+  height: 48px;
+}
+.carrinho2{
+  position: absolute;
+  left: 540px;
+  top: 85px;
+  height: 48px;
+}
+
+.comprar2{  /* Palavra Comprar, ao lado do carrinho */
+  display: flex;
+  left: 580px;
+  color:white;
+  font-size: 28px;
+  /*align-items: center;  (align-items: posiciona elementos do lado direito) -> posiciona elemento do lado direito-inferior */
+}
 
 
 
