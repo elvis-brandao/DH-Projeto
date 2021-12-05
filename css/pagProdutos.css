@@ -662,11 +662,30 @@ font-family: rosarivo;
   display: flex;
   position: absolute;
   top: 10px;
-  left: 450px;
+  left: 240px;
   font-size: 30px;
   font-family: rosariva;
   color: white;
 }
+.dublagem{
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 370px;
+  font-size: 30px;
+  font-family: rosariva;
+  color: white;
+}
+.legenda{
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 520px;
+  font-size: 30px;
+  font-family: rosariva;
+  color: white;
+}
+
 .pp3{   /*Português)*/
   display: flex;
   position: absolute;
@@ -685,14 +704,14 @@ font-family: rosarivo;
   height: 30px;
 position: absolute;
 top: 50px;
-left: 480px;
+left: 420px;
 }
 .ticket2{
   width: 30px;
   height: 30px;
 position: absolute;
 top: 85px;
-left: 480px;
+left: 420px;
 }
 
 
@@ -701,7 +720,7 @@ left: 480px;
   height: 30px;
 position: absolute;
 top: 120px;
-left: 480px;
+left: 420px;
 }
 
 
@@ -710,7 +729,7 @@ left: 480px;
   height: 30px;
 position: absolute;
 top: 160px;
-left: 480px;
+left: 420px;
 }
 
 
@@ -719,9 +738,80 @@ left: 480px;
   height: 30px;
 position: absolute;
 top: 195px;
-left: 480px;
+left: 420px;
 }
 
+.ticket6{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 53px;
+left: 285px;
+}
+.ticket7{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 88px;
+left: 285px;
+}
+.ticket8{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 120px;
+left: 285px;
+}
+.ticket9{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 155px;
+left: 285px;
+}
+.ticket10{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 193px;
+left: 285px;
+}
+
+.ticket11{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 195px;
+left: 570px;
+}
+.ticket12{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 156px;
+left: 570px;
+}
+.ticket13{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 120px;
+left: 570px;
+}
+.ticket14{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 85px;
+left: 570px;
+}
+.ticket15{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 52px;
+left: 570px;
+}
 
 
 .pp4{ /* Ingês*/
@@ -785,9 +875,6 @@ left: 480px;
   top: 100px;
   left: 200px;
 }
-
-
-
 
 .containerFooter{
   max-width: 1360px;
