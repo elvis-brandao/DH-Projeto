@@ -248,7 +248,7 @@ main{
   top: 1040px;
   height: 80px;
   left: 770px;
-  width: 731px;
+  width: 767px;
   justify-items: center; /* posiciona no centro horizontalmente   */
  align-items: center; /* posiciona no centro verticalmente   */
 
@@ -257,7 +257,13 @@ main{
 .comprar{ /*Div da frase: Comprar Hollow Knight */
   color: white;
   font-size: 40px;
+  
 }
+.comprar2{
+font-family: rosarivo;
+margin-left: 40px;
+}
+
 p{
   margin: 0px;
 }
@@ -287,7 +293,7 @@ p{
   position: absolute;
   top: 1150px;
   left: 770px;
-  width: 730px;
+  width: 765px;
   height: 60px;
 
 }
@@ -317,13 +323,12 @@ font-size: 30px;
   background-color: rgb(52, 62, 90);
   
 }
-.Divdireita{  
-  background-color: pink;
+.Divdireita{    /* Div abaixo da Div Idiomas  */
  width: 645px;
  position: absolute;
  left: 1550px;
- top: 1210px;
- height: 400px;
+ top: 1270px;
+ height: 380px;
  background-color:rgb(52, 62, 90)
  
 }
@@ -411,29 +416,31 @@ font-family: rosarivo;
   background-color: rgb(23, 40, 65);;
   font-family: rosarivo;
   top: 800px;
-  left: 10px;
-  gap: 20px;
+  left: 20px;
+  gap: 38px;
    color: white;
   font-size: 25px;
 
 }
 
-.classificacao{
+.classificacao {
 display: flex;
-top: 300px;
-left: 200px;
 
+font-family: rosarivo;
   
 }
 
 .vendas{
   margin-left: 50px;
   margin-top: 10px;
+  font-family: rosarivo;
 }
 
 .preco{
-  margin-left: 12px;
+  margin-left: 10px;
   margin-top: 10px;
+  font-family: rosarivo;
+  
 }
 
 .filtradoPor{
@@ -447,13 +454,12 @@ left: 200px;
   height: 55px;
   margin-bottom: 5px;
   gap: 20px;
-  
-  font-family: rosarivo;
-  font-style:normal; 
+   font-style:normal; 
   width: 760px;
   height: 60px;
-  color: white;
+  color: #FFFFFF;
   font-size: 25px;
+  font-family: rosarivo;
 }
 .vendedor3{
  
@@ -631,6 +637,154 @@ left: 200px;
   /*align-items: center;  (align-items: posiciona elementos do lado direito) -> posiciona elemento do lado direito-inferior */
 }
 
+.acimaDaDireita{    /* Div de IDIOMAS */
+  display: flex;
+  position: absolute;
+  background-color: rgb(52, 62, 90);;
+  width: 640px;
+  height: 240px;
+ top: 1020px;
+ left: 1553px;
+
+}
+
+.pp1{      /* Palavra Idiomas*/
+  display: flex;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  font-size: 35px;
+  font-family: rosariva;
+  color: white;
+}
+
+.pp2{   /* Palavra interface*/
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 450px;
+  font-size: 30px;
+  font-family: rosariva;
+  color: white;
+}
+.pp3{   /*Português)*/
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  font-size: 25px;
+  border-top:  4px  solid;
+  width: 610px;
+  font-family: rosariva;
+  color: white;
+  
+  
+}
+.ticket{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 50px;
+left: 480px;
+}
+.ticket2{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 85px;
+left: 480px;
+}
+
+
+.ticket3{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 120px;
+left: 480px;
+}
+
+
+.ticket4{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 160px;
+left: 480px;
+}
+
+
+.ticket5{
+  width: 30px;
+  height: 30px;
+position: absolute;
+top: 195px;
+left: 480px;
+}
+
+
+
+.pp4{ /* Ingês*/
+  display: flex;
+  position: absolute;
+  top: 85px;
+  left: 25px;
+  font-size: 25px;
+  width: 610px;
+  border-top:  1px  solid;
+  font-family: rosariva;
+  color: white;
+}
+.pp5{   /* Francês*/
+  display: flex;
+  position: absolute;
+  top: 120px;
+  left: 25px;
+  font-size: 25px;
+  width: 610px;
+  border-top:  1px  solid;
+  font-family: rosariva;
+  color: white;
+}
+.pp6{ /* Alemão*/
+  display: flex;
+  position: absolute;
+  top: 155px;
+  left: 25px;
+  color: yellow;
+  font-size: 25px;
+  width: 610px;
+  border-top:  1px  solid;
+  font-family: rosariva;
+  color: white;
+}
+.pp7{ /* Espanhol (Espanha)*/
+  display: flex;
+  position: absolute;
+  top: 190px;
+  left: 25px;
+  font-size: 25px;  
+  width: 610px;
+  border-top:  1px  solid;
+  font-family: rosariva;
+  color: white;  
+}
+.pp8{ /* Ver todos os idiomas*/
+  color: #00D1FF;
+  display: flex;
+  position: absolute;
+  top: 225px;
+  left: 25px;
+  width: 610px;
+  border-top:  1px  solid white;
+   font-size: 20px;
+}
+.pp9{
+  display: flex;
+  position: relative;
+  top: 100px;
+  left: 200px;
+}
 
 
 
