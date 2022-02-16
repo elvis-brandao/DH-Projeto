@@ -1,7 +1,6 @@
 .categorias{
   height: 66px;
   max-width: 1360px;
-  margin-top: 16px;
   background-color: #07001F;
   margin-left: auto;
   margin-right: auto;
@@ -53,7 +52,7 @@ margin-left: auto;
 margin-right: auto;
 }
 .t1, .t2{
-margin-top: 32px;
+margin-top: 16px;
 margin-bottom: 8px;
 color: white;
 font-size: 24px;
@@ -69,18 +68,24 @@ font-size: 24px;
 }
 .boxCentral{
   max-width: 1360px;
-  height: 1000px;
+  /* height: 985px; */
+  height: auto;
+  max-height: 985px;
+  min-height: 656px;
   display: flex;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 32px;
 }
 .emAlta{
   display: flex;
   width: 1100px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-content: flex-start;
   margin-right: 8px;
+  overflow: hidden;
   }
 .topVendedores{
   width: 250px;
@@ -89,11 +94,10 @@ font-size: 24px;
   border-radius: 20px;
   margin-top: 4px;
   margin-bottom: 4px;
-  padding-top: 8px;
-  padding-bottom: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-content: flex-start;
+  overflow: hidden;
 }
 main > .boxCentral > .emAlta > .jogosEmAlta > img{
   width: 265px;
@@ -126,13 +130,13 @@ main > .boxCentral > .emAlta > .jogosEmAlta > img{
 main > .boxCentral > .topVendedores > .imgVendedores > img{
   width: 80px;
   border-radius: 40px;
-  margin-left: 16px;
   margin-right: 16px;
 }
 .imgVendedores{
   display: flex;
   align-items: center;
   text-decoration: none;
+  margin: 8px auto 8px 8px;
 }
 .imgVendedores:hover{
   background-color: #7C78A8;
@@ -192,6 +196,10 @@ img {vertical-align: middle;}
   background-color: rgba(0,0,0,0.8);
 }
 /* The dots/bullets/indicators */
+.dots-Container{
+  text-align: center;
+  height: 0;
+}
 .dot {
   cursor: pointer;
   height: 15px;
