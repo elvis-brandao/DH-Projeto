@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-    const Jogo = sequelize.define('Jogo', {
+    const jogo = sequelize.define('Jogo', {
         id:{
             type: DataType.INTEGER,
             primaryKey: true,
@@ -40,5 +40,15 @@ module.exports = (sequelize, DataType) => {
         timestamps: false
     });
     
-    return Jogo;
+    
+    // na verdade essa associação está errada. jogo pertence a vendedor e não a usuario. arumar depois!
+    // deixei aqui somente para exemplo e consulta de modelo de código
+    jogo.associate = model => {
+        jogo.belongsTo(model.Usuario, {
+            foreignKey: 'vendedores_id',
+            as: 'vendedor'
+        });
+    };
+
+    return jogo;
 };

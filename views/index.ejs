@@ -53,19 +53,17 @@
             }
             </script>
         </div>
-        <div class = "categorias">
+        <form class = "categorias" method="GET" action="/filtro">
             <nav>
                 <ul>
-                    <li><a href="">PC</a></li>
-                    <li><a href="">XBOX</a></li>
-                    <li><a href="">PLAYSTATION</a></li>
-                    <li><a href="">NINTENDO</a></li>
-                    <li><a href="">INDIES</a></li>
+                    <% plataformas.forEach(plataforma => { %>
+                      <li><a href="/filtro/c/<%= plataforma.dataValues.id %>"><%= plataforma.dataValues.plataforma_jogo %></a></li>
+                    <% }) %>
                 </ul>
             </nav>
-            <div class = "boxBuscar">Buscar</div>
+            <input class = "boxBuscar" name="busca" placeholder="Buscar" autocomplete="off">
             <img src="./img/lupa.png" alt="">
-        </div>
+        </form>
         <div class = "titulosBoxes">
           <h2 class = "t1">JOGOS EM ALTA</h2>
           <h2 class = "t2">TOP VENDEDORES</h2>

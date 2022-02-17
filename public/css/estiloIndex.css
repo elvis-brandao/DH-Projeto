@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  text-transform: uppercase;
 }
 main > .categorias >nav > ul{
   padding: 0;
@@ -20,7 +21,7 @@ main > .categorias > nav > ul > li{
 }
 main > .categorias > nav > ul > li > a{
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 10px;
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -29,16 +30,16 @@ main > .categorias > nav > ul > li > a:hover{
   background-color: #7C78A8;
 }
 .boxBuscar{
-  background-color: white;
   width: 573px;
   height: 40px;
   border-radius: 20px;
   margin-right: 16px;
-  display: flex;
-  align-items: center;
   font-size: 16px;
-  color: gray;
   text-indent: 16px;
+  border: 0;
+}
+.boxBuscar:focus{
+  outline: none;
 }
 main > .categorias > img{
   position: absolute;
