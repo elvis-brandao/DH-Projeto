@@ -11,7 +11,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form method="POST" action="#" enctype="multipart/form-data">
                 <h1>Crie uma Conta</h1>
                 <div class="social-container">
                     <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -19,9 +19,29 @@
                     <a href="#" class="google"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>ou use seu email para se cadastrar</span>
-                <input type="text" placeholder="Nome" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Senha" />
+                
+                <div class="row-container">
+                    <label for="nome">Nome</label>
+                    <input name="nome" id="nome" type="text" placeholder="Insira seu nome completo"/>
+                </div>
+                <div class="row-container">
+                    <label for="cpf">CPF</label>
+                    <input name="cpf" id="cpf" type="text" placeholder="Insira seu CPF"/>
+                </div>
+                <div class="row-container">
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" placeholder="Insira seu email"/>
+                </div>
+                <div class="row-container">
+                    <label for="tel">Telefone</label>
+                    <input name="tel" id="tel" type="tel" placeholder="Insira seu telefone"/>
+                    <label for="dataNasc">Nasc.</label>
+                    <input name="dataNasc" id="dataNasc" type="date"/>
+                </div>
+                <div class="row-container">
+                    <label for="senha">Senha</label>
+                    <input name="senha" id="senha" type="password" placeholder="Crie uma senha"/>
+                </div>
                 <button>Cadastrar</button>
             </form>
         </div>
