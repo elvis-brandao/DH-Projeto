@@ -15,9 +15,6 @@ const controller = {
     produto: (req, res) => {
         res.render('pagProdutos');
     },
-    login: (req, res) => {
-        res.render('login');
-    },
     forum: (req, res) => {
         res.render('pagForum');
     },

@@ -6,7 +6,6 @@ var homeController = require('../controllers/HomeControllers');
 router.get('/', homeController.home);
 router.get('/streaming', homeController.streaming);
 router.get('/produto', homeController.produto);
-router.get('/login', homeController.login);
 router.get('/forum', homeController.forum);
 router.get('/filtro', homeController.filtro);
 router.get('/filtro/c/:id', homeController.filtroCategoria);
