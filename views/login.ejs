@@ -26,7 +26,7 @@
                 </div>
                 <div class="row-container">
                     <label for="cpf">CPF</label>
-                    <input name="cpf" id="cpf" type="text" placeholder="Insira seu CPF"/>
+                    <input name="cpf" id="cpf" type="text" placeholder="Insira seu CPF" maxlength="14"/>
                 </div>
                 <div class="row-container">
                     <label for="email">Email</label>
@@ -87,6 +87,18 @@
 
         signInButton.addEventListener('click', () => {
             container.classList.remove("right-panel-active");
+        });
+    </script>
+    <script>
+        let cpf = document.getElementById('cpf');
+
+        cpf.addEventListener('keypress', () => {
+            let cpfLength = cpf.value.length;
+            if(cpfLength === 3 || cpfLength === 7){
+                cpf.value += '.';
+            }else if(cpfLength === 11){
+                cpf.value += '-';
+            };
         });
     </script>
 </body>
