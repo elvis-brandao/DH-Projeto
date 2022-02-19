@@ -1,9 +1,9 @@
-const CPF = (strCPF) => {
+const validaCPF = (strCPF = '00000000000') => {
     return (req, res, next) => {
         var Soma;
         var Resto;
         
-        if (strCPF == "00000000000"){
+        if (strCPF == '00000000000'){
             req.cpfValido = false;
             next();
         };
@@ -45,4 +45,4 @@ const CPF = (strCPF) => {
     };
 };
 
-module.exports = CPF;
+module.exports = validaCPF;
