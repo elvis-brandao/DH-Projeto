@@ -31,6 +31,9 @@ module.exports = (sequelize, DataType) => {
         data_nasc_usuario:{
             type: DataType.DATEONLY,
             allowNull:false
+        },
+        foto_usuario:{
+            type: DataType.TEXT
         }
     },
     {
