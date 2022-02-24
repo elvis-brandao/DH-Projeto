@@ -84,7 +84,7 @@ input {
 	background-color: #eee;
 	border: none;
 	padding: 8px 8px;
-	margin: 8px 0;
+	/* margin: 8px 0; */
 	width: 100%;
 }
 
@@ -216,7 +216,6 @@ input {
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
@@ -224,9 +223,20 @@ input {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
+	font-size: 40px;
+	color: #54539c;
 }
 
 .row-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 8px;
+	margin-right: 8px;
+}
+
+.dupla{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -234,25 +244,12 @@ input {
 }
 
 .row-container > label{
-	width: 60px;
+	width: 200px;
 	text-align: justify;
-	margin-right: 8px;
+	margin-left: 8px;
 }
 .row-container > input{
 	width: 100%;
-}
-
-.facebook{
-	background-image: url("https://seeklogo.com/images/F/facebook-logo-966BBFBC34-seeklogo.com.png");
-	background-size: cover;
-}
-  .instagram{
-	background-image: url("https://seeklogo.com/images/I/instagram-logo-3368394263-seeklogo.com.jpg");
-	background-size: cover;
-}
-  .google{
-	background-image: url("https://seeklogo.com/images/G/google-2015-logo-65BBD07B01-seeklogo.com.png");
-	background-size: cover;
 }
 
 .wrapper {
@@ -271,8 +268,8 @@ input {
 	background-size: cover;
 	background-position: center;
 	display: block;
-	width: 125px;
-	height: 125px;
+	width: 115px;
+	height: 115px;
 	border-radius: 50%;
 	color: rgba(0, 0, 0, 0);
   }

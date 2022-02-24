@@ -11,5 +11,6 @@ const multer = require('../middlewares/multer');
 /* Routes */
 router.get('/', loginController.login);
 router.post('/cadUsuario', multer.single('foto-usuario'), validadorDeForm, loginController.cadUsuario);
+router.post('/', multer.none(), loginController.loginUsuario)
 
 module.exports = router;
