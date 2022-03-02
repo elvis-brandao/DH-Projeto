@@ -5,18 +5,16 @@ const Op = Sequelize.Op;
 const controller = {
     home: async (req, res) => {
         const plataformas = await Plataforma.findAll();
-        console.log(plataformas[0].dataValues);
-
-        res.render('index', {plataformas});
+        res.render('index', {plataformas, usuario: req.usuario});
     },
     streaming: (req, res) => {
-        res.render('streaming');
+        res.render('streaming', {usuario: req.usuario});
     },
     produto: (req, res) => {
-        res.render('pagProdutos');
+        res.render('pagProdutos', {usuario: req.usuario});
     },
     forum: (req, res) => {
-        res.render('pagForum');
+        res.render('pagForum', {usuario: req.usuario});
     },
     filtro: async (req, res) => {
         let filtro = req.query.busca;

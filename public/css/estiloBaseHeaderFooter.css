@@ -10,7 +10,6 @@ body{
 .logo{
     height: 64px;
     margin-left: 8px;
-    margin-top: 1px;
 }
 .botoesHeader{
     background: #54539c;
@@ -168,8 +167,81 @@ main{
   background-size: cover;
 }
 
+.menu {
+  z-index: 100;
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+  background: #54539c;
+  color: #fff;
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+  width: 210px;
+  max-width: 210px;
+}
 
+.menu:active{
+  transform: scale(0.98);
+}
 
+.menu img {
+  background: #54539c;
+  height: 3rem;
+  width: 3rem;
+  vertical-align: middle;
+  margin: 0.2rem 0.2rem 0.2rem 0.5rem;
+  border-radius: 50%;
+}
+.menu span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 125px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-left: 0.2rem;
+}
+.submenu {
+  z-index: 100;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-right: 8px;
+  border-radius: 5px;
+  width: 210px;
+  max-width: 210px;
+}
+.submenu li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+.submenu li a i {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  margin: 0 0.75rem 0 -0.25rem;
+}
+.submenu li a:hover {
+  background: #7C78A8;
+  color: #fff;
+}
+.submenu li:first-child a:hover {
+  border-radius: 5px 5px 0 0;
+}
+.submenu li:last-child a:hover {
+  border-radius: 0 0 5px 5px;
+}
 
 @media (max-width: 540px){
   .logo{

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/estiloBaseHeaderFooter.css">
 </head>
 <body>
@@ -22,6 +23,20 @@
                 <li><a href="/forum">FÓRUM</a></li>
             </ul>
         </nav>
-        <button class = "botoesHeader" onclick="window.location='/login';">Entrar</button>
+
+        <% if(typeof(usuario) === 'undefined'){ %>
+          <button class = "botoesHeader" onclick="window.location='/login';">Entrar</button>
+        <% }else{ %>
+          <button class="menu">
+              <span><%= usuario.nome_usuario.split(' ')[0] %></span>
+              <img src="<%= usuario.foto_usuario %>">
+          </button>  
+          <ul class="submenu">
+            <li class="item-menu"><a href="#"><i class="fa-solid fa-user"></i>Perfil</a></li>
+            <li class="item-menu"><a href="#"><i class="fa-solid fa-bag-shopping"></i>Meus Pedidos</a></li>
+            <li class="item-menu"><a href="/login/logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+          </ul>
+        <% } %>
+        <script src="/js/menu_login.js"></script>
       </div>
     </header>

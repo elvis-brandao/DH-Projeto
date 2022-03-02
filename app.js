@@ -9,6 +9,7 @@ var session = require('express-session');
 
 var homeRouter = require('./routes/HomeRouters');
 var loginRouter = require('./routes/LoginRouters');
+var session_ativa = require('./middlewares/session_ativa');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session_ativa);
 app.use('/', homeRouter);
 app.use('/login', loginRouter);
 

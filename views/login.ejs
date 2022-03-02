@@ -60,6 +60,7 @@
                 <button type="submit">Cadastrar</button>
             </form>
         </div>
+        
         <div class="form-container sign-in-container">
             <form method="POST" action="/login" enctype="multipart/form-data">
                 <h1>Entrar</h1>
@@ -72,17 +73,18 @@
 
                 <div class="row-container">
                     <label for="email_usuario">Email</label>
-                    <input name="email_usuario" id="email_usuario" type="email" placeholder="Insira seu email cadastrado"/>
+                    <input name="email_usuario" id="email_usuario_login" type="email" placeholder="Insira seu email cadastrado"/>
                 </div>
                 <div class="row-container">
                     <label for="senha_usuario">Senha</label>
-                    <input name="senha_usuario" id="senha_usuario" type="password" placeholder="Entre com sua senha"/>
+                    <input name="senha_usuario" id="senha_usuario_login" type="password" placeholder="Entre com sua senha"/>
                 </div>
 
                 <a href="#">Esqueceu sua senha?</a>
                 <button type="submit">Entrar</button>
             </form>
         </div>
+
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
@@ -99,38 +101,9 @@
         </div>
     </div>
 
-    <script>
-        const signUpButton = document.getElementById('signUp');
-        const signInButton = document.getElementById('signIn');
-        const container = document.getElementById('container');
-
-        signUpButton.addEventListener('click', () => {
-            container.classList.add("right-panel-active");
-        });
-
-        signInButton.addEventListener('click', () => {
-            container.classList.remove("right-panel-active");
-        });
-    </script>
+    <script src="/js/login_effect.js"></script>
+    <script src="/js/photo_profile_effect.js"></script>
     <script src="/js/mask_cpf.js"></script>
     <script src="/js/mask_tel.js"></script>
-    <script>
-        let image = document.getElementById('img-result');
-        let uploader = document.getElementById('foto-usuario');
-
-        image.addEventListener('click', evt => {
-            evt.preventDefault();
-            uploader.click();
-        })
-
-        uploader.onchange = function () {
-            var reader = new FileReader();
-            reader.onload = function (evt) {
-                image.classList.remove("no-image");
-                image.style.backgroundImage = "url(" + evt.target.result + ")";
-            };
-            reader.readAsDataURL(uploader.files[0]);
-        };
-    </script>
 </body>
 </html>

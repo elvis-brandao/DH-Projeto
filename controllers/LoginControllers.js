@@ -16,7 +16,7 @@ const controller = {
             res.send('Erro ' + JSON.stringify(erros.errors));
         }else{
             let {nome_usuario, cpf_usuario, email_usuario, senha_usuario, telefone_usuario, data_nasc_usuario} = req.body;
-            let foto_usuario = path.resolve(__dirname + '/../public/img/profile-img' + req.file.filename);
+            let foto_usuario = '/img/profile-img/' + req.file.filename;
             let senhaEnc = bcrypt.hashSync(senha_usuario, 10);
 
             let usuario = await Usuario.create({nome_usuario, cpf_usuario, email_usuario, senha_usuario: senhaEnc, telefone_usuario, data_nasc_usuario, foto_usuario});
@@ -26,14 +26,21 @@ const controller = {
         };
     },
     loginUsuario: async (req, res) => {
-        // console.log(req.body)
-
         const usuario = await Usuario.findAll({where: {email_usuario: req.body.email_usuario}});
+
         if(usuario.length > 0 && bcrypt.compareSync(req.body.senha_usuario, usuario[0].dataValues.senha_usuario)){
-            res.send('Usuario logado!');
+            req.session.usuario = usuario[0].dataValues;
+            console.log(req.session.usuario);
+            console.log('-----------------');
+            console.log(usuario[0].dataValues);
+            res.redirect('/');
         } else{
-            res.send('Usuário ou senha errados. Cheque os dados e tente novamente!');
+            res.send('email ou senha errados, verifique os dados e tente novamente');
         };
+    },
+    logout: (req, res) => {
+        req.session.usuario = undefined;
+        res.redirect('/');
     }
 };
 
