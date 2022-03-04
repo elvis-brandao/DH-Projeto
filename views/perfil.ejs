@@ -1,0 +1,58 @@
+<%- include('parts/head',{title:'Game Traders'}); %>
+  <!-- Seu estilo CSS aqui -->
+  <link rel="stylesheet" href="/css/estiloPerfil.css">
+  <main>
+    <!-- SEU CÓDIGO AQUI! -->
+    <H1>Meu Perfil</H1>
+    <div class="box-principal">
+      <div class="menu-esquerda">
+        <ul>
+          <li>Editar Perfil</li>
+          <li>Meus Pedidos</li>
+          <li>Minhas Vendas</li>
+        </ul>
+      </div>
+      <div class="conteudo-direita">
+        <h2>Editar Perfil</h2>
+        <form method="POST" action="/login/cadUsuario" enctype="multipart/form-data">
+          <div class="wrapper">
+            <input type="file" name="foto-usuario" id="foto-usuario" accept="'image/*'" style="display: none;">
+            <button class="no-image" id="img-result">Upload Image</button>
+          </div>
+
+          <div class="row-container">
+            <label for="nome_usuario">Nome</label>
+            <input name="nome_usuario" id="nome_usuario" type="text" placeholder="Insira seu nome completo" />
+          </div>
+          <div class="row-container">
+            <label for="cpf_usuario">CPF</label>
+            <input name="cpf_usuario" id="cpf_usuario" type="text" placeholder="Insira seu CPF" maxlength="14" />
+          </div>
+          <div class="row-container">
+            <label for="email_usuario">Email</label>
+            <input name="email_usuario" id="email_usuario" type="email" placeholder="Insira seu email" />
+          </div>
+          <div class="dupla">
+            <div class="row-container">
+              <label for="telefone_usuario">Telefone</label>
+              <input name="telefone_usuario" id="telefone_usuario" type="tel" placeholder="Insira seu telefone" />
+            </div>
+            <div class="row-container">
+              <label for="data_nasc_usuario">Data Nascimento</label>
+              <input name="data_nasc_usuario" id="data_nasc_usuario" type="date" />
+            </div>
+          </div>
+          <div class="row-container">
+            <label for="senha_usuario">Senha</label>
+            <input name="senha_usuario" id="senha_usuario" type="password" placeholder="Crie uma senha" />
+          </div>
+          <div class="row-container">
+            <label for="conf_senha_usuario">Confirmação de senha</label>
+            <input name="conf_senha_usuario" id="conf_senha_usuario" type="password" placeholder="Confirme sua senha" />
+          </div>
+          <button type="submit">Editar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <%- include('parts/foot'); %>

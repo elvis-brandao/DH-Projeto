@@ -27,6 +27,9 @@ const controller = {
 
         const jogos = await Jogo.findAll({include: 'vendedor', where: {plataformas_jogo_id: idCategoria}});
         res.send(jogos);
+    },
+    perfil: (req, res) => {
+        res.render('perfil', {usuario: req.usuario});
     }
 };
 
