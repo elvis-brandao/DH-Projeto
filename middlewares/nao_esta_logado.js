@@ -1,0 +1,1 @@
+module.exports = (req, res, next) => req.usuario === undefined ? res.redirect('/login') : next();

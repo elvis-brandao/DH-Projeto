@@ -5,7 +5,7 @@
     <!-- SEU CÓDIGO AQUI! -->
     <H1>Meu Perfil</H1>
     <div class="box-principal">
-      <div class="menu-esquerda">
+      <div class="conteudo-esquerda">
         <ul>
           <li>Editar Perfil</li>
           <li>Meus Pedidos</li>
@@ -15,44 +15,41 @@
       <div class="conteudo-direita">
         <h2>Editar Perfil</h2>
         <form method="POST" action="/login/cadUsuario" enctype="multipart/form-data">
-          <div class="wrapper">
+          <div class="wrapper" style="background-image: url('<%= usuario.foto_usuario %>');">
             <input type="file" name="foto-usuario" id="foto-usuario" accept="'image/*'" style="display: none;">
             <button class="no-image" id="img-result">Upload Image</button>
           </div>
 
           <div class="row-container">
             <label for="nome_usuario">Nome</label>
-            <input name="nome_usuario" id="nome_usuario" type="text" placeholder="Insira seu nome completo" />
+            <input name="nome_usuario" id="nome_usuario" type="text" autocomplete="none" value="<%= usuario.nome_usuario %>" disabled/>
           </div>
           <div class="row-container">
             <label for="cpf_usuario">CPF</label>
-            <input name="cpf_usuario" id="cpf_usuario" type="text" placeholder="Insira seu CPF" maxlength="14" />
+            <input name="cpf_usuario" id="cpf_usuario" type="text" maxlength="14" autocomplete="none" value="<%= usuario.cpf_usuario %>" disabled/>
           </div>
           <div class="row-container">
             <label for="email_usuario">Email</label>
-            <input name="email_usuario" id="email_usuario" type="email" placeholder="Insira seu email" />
+            <input name="email_usuario" id="email_usuario" type="email" autocomplete="none" value="<%= usuario.email_usuario %>" disabled/>
           </div>
           <div class="dupla">
             <div class="row-container">
               <label for="telefone_usuario">Telefone</label>
-              <input name="telefone_usuario" id="telefone_usuario" type="tel" placeholder="Insira seu telefone" />
+              <input name="telefone_usuario" id="telefone_usuario" type="tel" autocomplete="none" value="<%= usuario.telefone_usuario %>" disabled/>
             </div>
             <div class="row-container">
               <label for="data_nasc_usuario">Data Nascimento</label>
-              <input name="data_nasc_usuario" id="data_nasc_usuario" type="date" />
+              <input name="data_nasc_usuario" id="data_nasc_usuario" type="date" autocomplete="none" value="<%= usuario.data_nasc_usuario %>" disabled/>
             </div>
           </div>
-          <div class="row-container">
-            <label for="senha_usuario">Senha</label>
-            <input name="senha_usuario" id="senha_usuario" type="password" placeholder="Crie uma senha" />
-          </div>
-          <div class="row-container">
-            <label for="conf_senha_usuario">Confirmação de senha</label>
-            <input name="conf_senha_usuario" id="conf_senha_usuario" type="password" placeholder="Confirme sua senha" />
-          </div>
-          <button type="submit">Editar</button>
+          <button class="btn salvarBtn" type="submit" disabled>Salvar</button>
         </form>
+        <button class="btn editarBtn">Editar</button>
       </div>
     </div>
+    <script src="/js/edit_photo_profile_effect.js"></script>
+    <script src="/js/editarBtn_perfil.js"></script>
+    <script src="/js/mask_cpf.js"></script>
+    <script src="/js/mask_tel.js"></script>
   </main>
   <%- include('parts/foot'); %>
