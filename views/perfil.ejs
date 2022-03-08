@@ -7,14 +7,16 @@
     <div class="box-principal">
       <div class="conteudo-esquerda">
         <ul>
-          <li>Editar Perfil</li>
-          <li>Meus Pedidos</li>
-          <li>Minhas Vendas</li>
+          <li><a href="#">EDITAR PERFIL <i class="fa-solid fa-user-pen"></i></a></li>
+          <li><a href="#">ALTERAR SENHA <i class="fa-solid fa-key"></i></a></li>
+          <li><a href="#">MEUS PEDIDOS <i class="fa-solid fa-basket-shopping"></i></a></li>
+          <li><a href="#">MINHAS VENDAS <i class="fa-solid fa-store"></i></a></li>
+
         </ul>
       </div>
       <div class="conteudo-direita">
         <h2>Editar Perfil</h2>
-        <form method="POST" action="/login/cadUsuario" enctype="multipart/form-data">
+        <form method="POST" action="/perfil?_method=PUT" enctype="multipart/form-data">
           <div class="wrapper" style="background-image: url('<%= usuario.foto_usuario %>');">
             <input type="file" name="foto-usuario" id="foto-usuario" accept="'image/*'" style="display: none;">
             <button class="no-image" id="img-result">Upload Image</button>

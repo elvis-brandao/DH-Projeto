@@ -19,14 +19,14 @@ editarBtn.addEventListener('click', () => {
     editarBtn.setAttribute('disabled', '');
 });
 
-salvarBtn.addEventListener('click', e => {
-    e.preventDefault();
-    img_result.style.display = 'none';
-    nome_usuario.setAttribute('disabled', '');
-    cpf_usuario.setAttribute('disabled', '');
-    email_usuario.setAttribute('disabled', '');
-    telefone_usuario.setAttribute('disabled', '');
-    data_nasc_usuario.setAttribute('disabled', '');
-    salvarBtn.setAttribute('disabled', '');
-    editarBtn.removeAttribute('disabled');
-});
+// salvarBtn.addEventListener('click', () => {
+//     // e.preventDefault();
+//     img_result.style.display = 'none';
+//     nome_usuario.setAttribute('disabled', '');
+//     cpf_usuario.setAttribute('disabled', '');
+//     email_usuario.setAttribute('disabled', '');
+//     telefone_usuario.setAttribute('disabled', '');
+//     data_nasc_usuario.setAttribute('disabled', '');
+//     salvarBtn.setAttribute('disabled', '');
+//     editarBtn.removeAttribute('disabled');
+// });

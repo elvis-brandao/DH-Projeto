@@ -171,7 +171,9 @@ main{
   z-index: 100;
   position: absolute;
   right: 0px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #54539c;
   color: #fff;
   margin-right: 8px;
@@ -187,14 +189,33 @@ main{
   transform: scale(0.98);
 }
 
-.menu img {
-  background: #54539c;
+.menu:hover{
+  background-color: #7C78A8;
+}
+
+.menu > img {
+  background: #2d2c5e;
   height: 3rem;
   width: 3rem;
+  min-height: 3rem;
+  min-width: 3rem;
+  object-fit: cover;
   vertical-align: middle;
   margin: 0.2rem 0.2rem 0.2rem 0.5rem;
   border-radius: 50%;
 }
+
+.semFoto{
+  background: #2d2c5e;
+  height: 3rem;
+  width: 3rem;
+  min-height: 3rem;
+  min-width: 3rem;
+  margin: 0.2rem 0.2rem 0.2rem 0.5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
 .menu span {
   display: inline-block;
   vertical-align: middle;

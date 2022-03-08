@@ -5,6 +5,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
+var methodOverride = require('method-override');
 
 
 var homeRouter = require('./routes/HomeRouters');
@@ -12,6 +13,7 @@ var loginRouter = require('./routes/LoginRouters');
 var session_ativa = require('./middlewares/session_ativa');
 
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,6 +31,9 @@ app.use(session({
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+// override with POST having ?_method=DELETE for example
+app.use(methodOverride('_method'));
 
 app.use(session_ativa);
 app.use('/', homeRouter);

@@ -1,5 +1,8 @@
+const {check, validationResult, body} = require('express-validator');
+const fs = require('fs');
+const path = require('path');
 const Sequelize = require('sequelize')
-const {Jogo, Plataforma, sequelize} = require('../models');
+const {Jogo, Plataforma, Usuario, sequelize} = require('../models');
 const Op = Sequelize.Op;
 
 const controller = {
@@ -30,6 +33,35 @@ const controller = {
     },
     perfil: (req, res) => {
         res.render('perfil', {usuario: req.usuario});
+    },
+    editaPerfil: async (req, res) => {
+        let erros = validationResult(req);
+        
+        if(!erros.isEmpty()){
+            if(req.file !== undefined){
+                fs.unlink(path.resolve(__dirname + '/../public/img/profile-img/' + req.file.filename), () => console.log(`Arquivo ${req.file.filename} excluído...`));
+            };
+            res.send('Erro ' + JSON.stringify(erros.errors));
+        }else{
+            if(req.usuario.foto_usuario !== 'null'){
+                fs.unlink(path.resolve(__dirname + '/../public' + req.usuario.foto_usuario), () => console.log(`Arquivo ${req.usuario.foto_usuario} excluído...`));
+            }
+
+            let {nome_usuario, cpf_usuario, email_usuario, telefone_usuario, data_nasc_usuario} = req.body;
+            let foto_usuario = req.file === undefined ? 'null' : '/img/profile-img/' + req.file.filename;
+
+            let usuario = await Usuario.update({nome_usuario, cpf_usuario, email_usuario, telefone_usuario, data_nasc_usuario, foto_usuario}, {where: {id: req.usuario.id}});
+            
+            req.session.usuario.nome_usuario = nome_usuario;
+            req.session.usuario.cpf_usuario = cpf_usuario;
+            req.session.usuario.email_usuario = email_usuario;
+            req.session.usuario.telefone_usuario = telefone_usuario;
+            req.session.usuario.data_nasc_usuario = data_nasc_usuario;
+            req.session.usuario.foto_usuario = foto_usuario;
+            // res.send('Dados alterados com sucesso!');
+        };     
+        
+        res.redirect('/perfil');
     }
 };
 
