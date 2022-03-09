@@ -147,7 +147,7 @@ h1{
 }
 
 .row-container > label{
-	width: 200px;
+	/* width: 200px; */
 	text-align: justify;
 	margin-left: 4px;
 	font-size: 1.15rem;

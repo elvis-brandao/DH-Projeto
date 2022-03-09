@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `game_traders` /*!40100 DEFAULT CHARACTER SET utf
 USE `game_traders`;
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: localhost    Database: game_traders
+-- Host: 127.0.0.1    Database: game_traders
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -400,10 +400,11 @@ CREATE TABLE `usuarios` (
   `senha_usuario` varchar(60) NOT NULL,
   `telefone_usuario` varchar(20) DEFAULT NULL,
   `data_nasc_usuario` date NOT NULL,
+  `foto_usuario` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cpf_usuario_UNIQUE` (`cpf_usuario`),
   UNIQUE KEY `email_usuario_UNIQUE` (`email_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -412,7 +413,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'usuario1','11111','usu1@email.com','1234','111111','2000-01-01'),(2,'usuario2','22222','usu2@email.com','1234','222222','2000-02-02'),(3,'usuario3','33333','usu3@email.com','1234','333333','2000-03-03'),(4,'usuario4','44444','usu4@email.com','1234','444444','2000-04-04'),(5,'usuario5','55555','usu5@email.com','1234','555555','2000-05-05');
+INSERT INTO `usuarios` VALUES (1,'usuario1','11111','usu1@email.com','1234','111111','2000-01-01',NULL),(2,'usuario2','22222','usu2@email.com','1234','222222','2000-02-02',NULL),(3,'usuario3','33333','usu3@email.com','1234','333333','2000-03-03',NULL),(4,'usuario4','44444','usu4@email.com','1234','444444','2000-04-04',NULL),(5,'usuario5','55555','usu5@email.com','1234','555555','2000-05-05',NULL),(14,'lskbcaelvis','848.363.930-00','lskbca_elvis19@hotmail.com','$2b$10$3mqHCbqJcWZWnsj2X7.YBuiC7U3H9a1DAvO6MENw9tn/fuzfCX/py','(88)99805-4996','1987-08-13','/img/profile-img/foto-usuario-1646773257064-497508.jpg');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -505,14 +506,6 @@ LOCK TABLES `vendedores` WRITE;
 INSERT INTO `vendedores` VALUES (1,5.0,2),(2,9.9,5),(3,2.0,1);
 /*!40000 ALTER TABLE `vendedores` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'game_traders'
---
-
---
--- Dumping routines for database 'game_traders'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -523,4 +516,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-14 20:48:29
+-- Dump completed on 2022-03-08 21:15:25

@@ -14,5 +14,6 @@ router.get('/filtro', homeController.filtro);
 router.get('/filtro/c/:id', homeController.filtroCategoria);
 router.get('/perfil', nao_esta_logado, homeController.perfil);
 router.put('/perfil', multer.single('foto-usuario'), validaEditUsuario, homeController.editaPerfil);
+router.get('/perfil/alterarsenha', nao_esta_logado, homeController.viewSenha);
 
 module.exports = router;

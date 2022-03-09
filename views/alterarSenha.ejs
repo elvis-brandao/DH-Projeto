@@ -1,0 +1,36 @@
+<%- include('parts/head',{title:'Game Traders'}); %>
+  <!-- Seu estilo CSS aqui -->
+  <link rel="stylesheet" href="/css/estiloPerfil.css">
+  <main>
+    <!-- SEU CÓDIGO AQUI! -->
+    <H1>Meu Perfil</H1>
+    <div class="box-principal">
+      <div class="conteudo-esquerda">
+        <ul>
+          <li><a href="/perfil">EDITAR PERFIL <i class="fa-solid fa-user-pen"></i></a></li>
+          <li><a href="/perfil/alterarsenha">ALTERAR SENHA <i class="fa-solid fa-key"></i></a></li>
+          <li><a href="#">MEUS PEDIDOS <i class="fa-solid fa-basket-shopping"></i></a></li>
+          <li><a href="#">MINHAS VENDAS <i class="fa-solid fa-store"></i></a></li>
+        </ul>
+      </div>
+      <div class="conteudo-direita">
+        <h2>Alterar Senha</h2>
+        <form method="POST" action="/perfil/alterarsenha?_method=PUT" enctype="multipart/form-data">
+          <div class="row-container">
+            <label for="senha_antiga">Senha Antiga</label>
+            <input name="senha_antiga" id="senha_antiga" type="password" placeholder="Digite a senha antiga"/>
+          </div>
+          <div class="row-container">
+            <label for="senha_usuario">Nova senha</label>
+            <input name="senha_usuario" id="senha_usuario" type="password" placeholder="Crie uma nova senha"/>
+          </div>
+          <div class="row-container">
+            <label for="conf_senha_usuario">Confirmação de nova senha</label>
+            <input name="conf_senha_usuario" id="conf_senha_usuario" type="password" placeholder="Confirme sua senha"/>
+          </div>
+          <button class="btn salvarBtn" type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <%- include('parts/foot'); %>

@@ -43,14 +43,21 @@ const controller = {
             };
             res.send('Erro ' + JSON.stringify(erros.errors));
         }else{
-            if(req.usuario.foto_usuario !== 'null'){
-                fs.unlink(path.resolve(__dirname + '/../public' + req.usuario.foto_usuario), () => console.log(`Arquivo ${req.usuario.foto_usuario} excluído...`));
-            }
-
             let {nome_usuario, cpf_usuario, email_usuario, telefone_usuario, data_nasc_usuario} = req.body;
-            let foto_usuario = req.file === undefined ? 'null' : '/img/profile-img/' + req.file.filename;
+            let foto_usuario = req.usuario.foto_usuario;
+            // let foto_usuario = req.file === undefined ? 'null' : '/img/profile-img/' + req.file.filename;
 
-            let usuario = await Usuario.update({nome_usuario, cpf_usuario, email_usuario, telefone_usuario, data_nasc_usuario, foto_usuario}, {where: {id: req.usuario.id}});
+            if(req.usuario.foto_usuario !== 'null'){
+                if(req.file !== undefined){
+                    if(req.usuario.foto_usuario !== ('/img/profile-img/' + req.file.filename)){
+                        fs.unlink(path.resolve(__dirname + '/../public' + req.usuario.foto_usuario), () => console.log(`Arquivo ${req.usuario.foto_usuario} excluído...`));
+                        foto_usuario = '/img/profile-img/' + req.file.filename;
+                    };
+                };
+            };
+
+
+            await Usuario.update({nome_usuario, cpf_usuario, email_usuario, telefone_usuario, data_nasc_usuario, foto_usuario}, {where: {id: req.usuario.id}});
             
             req.session.usuario.nome_usuario = nome_usuario;
             req.session.usuario.cpf_usuario = cpf_usuario;
@@ -58,10 +65,12 @@ const controller = {
             req.session.usuario.telefone_usuario = telefone_usuario;
             req.session.usuario.data_nasc_usuario = data_nasc_usuario;
             req.session.usuario.foto_usuario = foto_usuario;
-            // res.send('Dados alterados com sucesso!');
         };     
         
         res.redirect('/perfil');
+    },
+    viewSenha: (req, res) => {
+        res.render('alterarsenha', {usuario: req.usuario});
     }
 };
 
