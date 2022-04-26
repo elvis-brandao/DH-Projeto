@@ -214,6 +214,9 @@ main{
   margin: 0.2rem 0.2rem 0.2rem 0.5rem;
   border-radius: 50%;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu span {

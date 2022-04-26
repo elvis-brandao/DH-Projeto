@@ -6,6 +6,8 @@ let validateRegister = [
     check('nome_usuario')
         .notEmpty().withMessage('O campo nome deve ser preenchido').bail()
         .isLength({min: 3}).withMessage('Você deve preencher seu nome completo'),
+    check('cpf_usuario')
+        .notEmpty().withMessage('O campo CPF deve ser preenchido').bail(),
     check('email_usuario')
         .notEmpty().withMessage('O campo email não deve estar em branco').bail()
         .isEmail().withMessage('Por favor usar um email válido'),

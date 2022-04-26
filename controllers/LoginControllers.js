@@ -15,7 +15,9 @@ const controller = {
             if(req.file !== undefined){
                 fs.unlink(path.resolve(__dirname + '/../public/img/profile-img/' + req.file.filename), () => console.log(`Arquivo ${req.file.filename} excluído...`));
             };
-            res.send('Erro ' + JSON.stringify(erros.errors));
+            // res.send('Erro ' + JSON.stringify(erros.errors));
+            console.log(erros.errors)
+            res.render('criarConta', {erros: erros.errors, dados: req.body});
         }else{
             let {nome_usuario, cpf_usuario, email_usuario, senha_usuario, telefone_usuario, data_nasc_usuario} = req.body;
             let foto_usuario = req.file === undefined ? 'null' : '/img/profile-img/' + req.file.filename;

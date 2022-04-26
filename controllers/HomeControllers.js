@@ -1,7 +1,8 @@
 const {check, validationResult, body} = require('express-validator');
 const fs = require('fs');
 const path = require('path');
-const Sequelize = require('sequelize')
+const bcrypt = require('bcrypt');
+const Sequelize = require('sequelize');
 const {Jogo, Plataforma, Usuario, sequelize} = require('../models');
 const Op = Sequelize.Op;
 
@@ -43,10 +44,13 @@ const controller = {
             };
             res.send('Erro ' + JSON.stringify(erros.errors));
         }else{
-            let {nome_usuario, cpf_usuario, email_usuario, telefone_usuario, data_nasc_usuario} = req.body;
+            let {nome_usuario, cpf_usuario, telefone_usuario, data_nasc_usuario} = req.body;
             let foto_usuario = req.usuario.foto_usuario;
+            let email_usuario = req.usuario.email_usuario;
             // let foto_usuario = req.file === undefined ? 'null' : '/img/profile-img/' + req.file.filename;
 
+
+            //checa se a foto foi ou não trocada, se sim, apaga a antiga e salva a nova
             if(req.usuario.foto_usuario !== 'null'){
                 if(req.file !== undefined){
                     if(req.usuario.foto_usuario !== ('/img/profile-img/' + req.file.filename)){
@@ -56,6 +60,15 @@ const controller = {
                 };
             };
 
+            //checa se houve alteração de email, caso sim, faz uma segunda verificação, se o novo email já está na base, caso não, salva o novo email
+            if(req.usuario.email_usuario !== req.body.email_usuario){
+                const usuario = await Usuario.findAll({where: {email_usuario: req.body.email_usuario}});
+                if(usuario.length > 0){
+                    res.send('O email informado já está cadastrado no sistema');
+                }else{
+                    email_usuario = req.body.email_usuario;
+                };
+            };
 
             await Usuario.update({nome_usuario, cpf_usuario, email_usuario, telefone_usuario, data_nasc_usuario, foto_usuario}, {where: {id: req.usuario.id}});
             
@@ -71,6 +84,22 @@ const controller = {
     },
     viewSenha: (req, res) => {
         res.render('alterarsenha', {usuario: req.usuario});
+    },
+    editaSenha: async (req, res) => {
+        let erros = validationResult(req);
+        
+        if(!erros.isEmpty()){
+            res.send('Erro ' + JSON.stringify(erros.errors));
+        }else{
+            let senha_usuario = req.usuario.senha_usuario;
+
+            if(bcrypt.compareSync(req.body.senha_antiga, senha_usuario)){
+                await Usuario.update({senha_usuario: bcrypt.hashSync(req.body.senha_antiga, 10)}, {where: {id: req.usuario.id}});
+            }else{
+                res.send('Senha Incorreta, favor verificar os dados.')
+            };
+        };
+        res.redirect('/perfil');
     }
 };
 

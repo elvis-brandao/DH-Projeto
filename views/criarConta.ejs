@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/estiloLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container right-panel-active" id="container">
+        <div class="form-container sign-up-container">
+            
+            <form method="POST" action="/login/cadUsuario" enctype="multipart/form-data">
+                <h1>Crie uma Conta</h1>
+                <div class="social-container">
+                    <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <span>ou use seu email para se cadastrar</span>
+
+                <div class="wrapper">
+                    <input type="file" name="foto-usuario" id="foto-usuario" accept="'image/*'" style="display: none;">
+                    <button class="no-image" id="img-result">Upload Image</button>
+                </div>
+
+                <div class="box-erro">
+                    <span>
+                        <% if(typeof(erros) !== 'undefined'){ %>
+                            ERRO: <%= erros[0].msg %>
+                        <% } %>
+                    </span>
+                </div>
+                <div class="row-container">
+                    <label for="nome_usuario">Nome</label>
+                    <input name="nome_usuario" id="nome_usuario" type="text" placeholder="Insira seu nome completo" value="<%= dados.nome_usuario %>"/>
+                </div>
+                <div class="row-container">
+                    <label for="cpf_usuario">CPF</label>
+                    <input name="cpf_usuario" id="cpf_usuario" type="text" placeholder="Insira seu CPF" maxlength="14" value="<%= dados.cpf_usuario %>"/>
+                </div>
+                <div class="row-container">
+                    <label for="email_usuario">Email</label>
+                    <input name="email_usuario" id="email_usuario" type="email" placeholder="Insira seu email" value="<%= dados.email_usuario %>"/>
+                </div>
+                <div class="dupla">
+                    <div class="row-container">
+                        <label for="telefone_usuario">Telefone</label>
+                        <input name="telefone_usuario" id="telefone_usuario" type="tel" placeholder="Insira seu telefone" value="<%= dados.telefone_usuario %>"/>
+                    </div>
+                    <div class="row-container">
+                        <label for="data_nasc_usuario">Data Nascimento</label>
+                        <input name="data_nasc_usuario" id="data_nasc_usuario" type="date" value="<%= dados.data_nasc_usuario %>"/>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <label for="senha_usuario">Senha</label>
+                    <input name="senha_usuario" id="senha_usuario" type="password" placeholder="Crie uma senha"/>
+                </div>
+                <div class="row-container">
+                    <label for="conf_senha_usuario">Confirmação de senha</label>
+                    <input name="conf_senha_usuario" id="conf_senha_usuario" type="password" placeholder="Confirme sua senha"/>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        
+        <div class="form-container sign-in-container">
+            <form method="POST" action="/login" enctype="multipart/form-data">
+                <h1>Entrar</h1>
+                <div class="social-container">
+                    <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <span>ou use sua conta</span>
+
+                <div class="row-container">
+                    <label for="email_usuario">Email</label>
+                    <input name="email_usuario" id="email_usuario_login" type="email" placeholder="Insira seu email cadastrado"/>
+                </div>
+                <div class="row-container">
+                    <label for="senha_usuario">Senha</label>
+                    <input name="senha_usuario" id="senha_usuario_login" type="password" placeholder="Entre com sua senha"/>
+                </div>
+
+                <a href="#">Esqueceu sua senha?</a>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem vindo de volta!</h1>
+                    <p>Para se manter conectado, faça o login com seus dados</p>
+                    <button class="ghost" id="signIn">Entrar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Bem Vindo!</h1>
+                    <p>Cadastre-se e comece uma jornada conosco!</p>
+                    <button class="ghost" id="signUp">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const erro = <%- JSON.stringify(erros) %>;
+        const inputComErro = document.querySelector(`#${erro[0].param}`);
+
+        inputComErro.classList.add('input-error');
+    </script>
+    <script src="/js/login_effect.js"></script>
+    <script src="/js/photo_profile_effect.js"></script>
+    <script src="/js/mask_cpf.js"></script>
+    <script src="/js/mask_tel.js"></script>
+</body>
+</html>

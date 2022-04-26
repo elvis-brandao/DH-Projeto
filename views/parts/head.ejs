@@ -31,7 +31,7 @@
           <button class="menu">
               <span><%= usuario.nome_usuario.split(' ')[0] %></span>
               <% if(usuario.foto_usuario == 'null'){ %>
-                <div class="semFoto"><%= usuario.nome_usuario[0] %></div>
+                <div class="semFoto"><span><%= usuario.nome_usuario[0].toUpperCase() %></span></div>
               <% }else{ %>    
                 <img src="<%= usuario.foto_usuario %>" alt="<%= usuario.nome_usuario[0] %>">
               <% } %>
